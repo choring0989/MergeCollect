@@ -1,0 +1,11 @@
+{
+    "systemInfo": {
+        "arch": "x64",
+        "cpu": "11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz",
+        "version": "Windows 10 Education"
+    },
+    "sceneListMap": {
+        "8c52530f-5086-4398-a36d-f20b902cc720": "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\scene\\testScene.scene"
+    },
+    "deviceMd5": "1025b43e465f41e29d38e6417d0d1c46"
+}

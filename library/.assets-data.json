@@ -1,0 +1,173 @@
+{
+  "1ac6f3ec-fbb2-45ae-af1b-601c72af7e0f": {
+    "url": "db://assets/tile",
+    "value": {}
+  },
+  "158f861a-6c37-4c3e-aa43-b3c78a695c30": {
+    "url": "db://assets/scene",
+    "value": {}
+  },
+  "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7": {
+    "url": "db://assets/tile/block.fbx",
+    "value": {}
+  },
+  "282afd41-a0fb-49d2-a241-2d481d5b7024": {
+    "url": "db://assets/tile/blockDirt.fbx",
+    "value": {}
+  },
+  "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@53398": {
+    "url": "db://assets/tile/block.fbx@53398",
+    "value": {
+      "depends": [
+        "f648964e-8d32-41fc-9ac9-7a1e714dd17b"
+      ]
+    }
+  },
+  "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@27cd2": {
+    "url": "db://assets/tile/block.fbx@27cd2",
+    "value": {
+      "depends": []
+    }
+  },
+  "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@3577b": {
+    "url": "db://assets/tile/block.fbx@3577b",
+    "value": {
+      "depends": [
+        "f648964e-8d32-41fc-9ac9-7a1e714dd17b"
+      ]
+    }
+  },
+  "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@c8ce7": {
+    "url": "db://assets/tile/block.fbx@c8ce7",
+    "value": {
+      "depends": [
+        "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@53398",
+        "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@3577b",
+        "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@27cd2"
+      ]
+    }
+  },
+  "282afd41-a0fb-49d2-a241-2d481d5b7024@10e72": {
+    "url": "db://assets/tile/blockDirt.fbx@10e72",
+    "value": {
+      "depends": []
+    }
+  },
+  "282afd41-a0fb-49d2-a241-2d481d5b7024@3577b": {
+    "url": "db://assets/tile/blockDirt.fbx@3577b",
+    "value": {
+      "depends": [
+        "f648964e-8d32-41fc-9ac9-7a1e714dd17b"
+      ]
+    }
+  },
+  "282afd41-a0fb-49d2-a241-2d481d5b7024@089e1": {
+    "url": "db://assets/tile/blockDirt.fbx@089e1",
+    "value": {
+      "depends": [
+        "282afd41-a0fb-49d2-a241-2d481d5b7024@3577b",
+        "282afd41-a0fb-49d2-a241-2d481d5b7024@10e72"
+      ]
+    }
+  },
+  "8c52530f-5086-4398-a36d-f20b902cc720": {
+    "url": "db://assets/scene/testScene.scene",
+    "value": {
+      "depends": [
+        "8c52530f-5086-4398-a36d-f20b902cc720",
+        "ea60bd46-0776-4711-94f6-b52ff5964d03",
+        "f46876e4-e81b-4931-b493-6d367be385e7",
+        "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
+        "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
+        "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0"
+      ]
+    }
+  },
+  "887ec2ec-54f0-484b-b1ae-c4729e0333c2": {
+    "url": "db://assets/script",
+    "value": {}
+  },
+  "92c85038-c6ef-4827-abc4-60aef0c6b498": {
+    "url": "db://assets/tile/blockSnow.fbx",
+    "value": {}
+  },
+  "92c85038-c6ef-4827-abc4-60aef0c6b498@6b1de": {
+    "url": "db://assets/tile/blockSnow.fbx@6b1de",
+    "value": {
+      "depends": []
+    }
+  },
+  "92c85038-c6ef-4827-abc4-60aef0c6b498@3577b": {
+    "url": "db://assets/tile/blockSnow.fbx@3577b",
+    "value": {
+      "depends": [
+        "f648964e-8d32-41fc-9ac9-7a1e714dd17b"
+      ]
+    }
+  },
+  "92c85038-c6ef-4827-abc4-60aef0c6b498@dfa42": {
+    "url": "db://assets/tile/blockSnow.fbx@dfa42",
+    "value": {
+      "depends": [
+        "f648964e-8d32-41fc-9ac9-7a1e714dd17b"
+      ]
+    }
+  },
+  "92c85038-c6ef-4827-abc4-60aef0c6b498@19fcf": {
+    "url": "db://assets/tile/blockSnow.fbx@19fcf",
+    "value": {
+      "depends": [
+        "92c85038-c6ef-4827-abc4-60aef0c6b498@3577b",
+        "92c85038-c6ef-4827-abc4-60aef0c6b498@dfa42",
+        "92c85038-c6ef-4827-abc4-60aef0c6b498@6b1de"
+      ]
+    }
+  },
+  "f850c40d-2e26-487e-867a-fc6018225d8c": {
+    "url": "db://assets/script/objectFactory.ts",
+    "value": {}
+  },
+  "9999af2b-fd7e-4f3e-8587-e5dd15aeeb85": {
+    "url": "db://assets/script/ObjectFactory.ts",
+    "value": {}
+  },
+  "43df5d16-875c-4c21-befb-c2566a7cd53e": {
+    "url": "db://assets/prefabs",
+    "value": {}
+  },
+  "ea60bd46-0776-4711-94f6-b52ff5964d03": {
+    "url": "db://assets/prefabs/ObjectFactory.prefab",
+    "value": {
+      "depends": [
+        "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@c8ce7",
+        "92c85038-c6ef-4827-abc4-60aef0c6b498@19fcf"
+      ]
+    }
+  },
+  "8206195b-75a0-4ad5-9dee-992217139d05": {
+    "url": "db://assets/script/IngameManager.ts",
+    "value": {}
+  },
+  "d3a2435a-e5fe-496d-a07b-a9db1b7157b9": {
+    "url": "db://assets/script/BlockFactory.ts",
+    "value": {}
+  },
+  "dabe282f-7562-4e93-a3b3-ba85af76417c": {
+    "url": "db://assets/data",
+    "value": {}
+  },
+  "240c2653-d35b-430d-8e00-6bda48197143": {
+    "url": "db://assets/script/MapData.ts",
+    "value": {}
+  },
+  "34ac9fc8-3af2-46bb-8a12-cba371868d43": {
+    "url": "db://assets/data/map.json",
+    "value": {
+      "depends": []
+    }
+  },
+  "96934dea-d363-4778-8526-2af565399897": {
+    "url": "db://assets/script/Block.ts",
+    "value": {}
+  }
+}
