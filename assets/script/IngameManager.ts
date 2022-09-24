@@ -1,9 +1,12 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, Camera } from 'cc';
 import { BlockFactory } from './BlockFactory';
 const { ccclass, property } = _decorator;
 
 @ccclass('IngameManager')
 export class IngameManager extends Component {
+
+    @property({ type: Camera })
+    private readonly camera: Camera;
 
     @property({ type: Node })
     private blockLayer: Node = null;
@@ -14,14 +17,24 @@ export class IngameManager extends Component {
     @property({ type: Node })
     private uiLayer: Node = null;
 
+    private static _instance: IngameManager;
+
     blockFactory: BlockFactory;
+
+    onLoad() {
+        IngameManager._instance = this;
+    }
 
     start() {
         this.blockFactory = new BlockFactory(this.blockLayer);
     }
 
     update(deltaTime: number) {
-        
+
+    }
+
+    public static get camera() {
+        return IngameManager._instance.camera;
     }
 }
 

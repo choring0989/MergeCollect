@@ -8,7 +8,7 @@ export class Block extends Component{
     start() {
     }
 
-    update(deltaTime) {
+    update(deltaTime: number) {
         
     }
 }
