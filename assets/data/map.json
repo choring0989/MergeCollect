@@ -2,6 +2,8 @@
     "setting":{
        "maxRow":4,
        "maxCol":4,
+       "startRow": -2,
+       "startCol": -2,
        "centerPivotX": 0,
        "centerPivotY": 0
     },

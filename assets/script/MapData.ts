@@ -4,13 +4,17 @@ const { ccclass, property } = _decorator;
 
 @ccclass('MapData')
 export class MapData {
+    // startRow = centerPivotX - (maxRow / 2);
+    private _setting = {
+        maxRow: 0,
+        maxCol: 0,
+        startRow: 0,
+        startCol: 0,
+        centerPivotX: 0,
+        centerPivotY: 0,
+    }
 
-    maxRow: number = 0;
-    maxCol: number = 0;
-    centerPivotX: number = 0;
-    centerPivotY: number = 0;
-
-    currentMap = {
+    private _currentMap = {
         id: '',
         row: 0,
         col: 0,
@@ -18,19 +22,20 @@ export class MapData {
     };
 
     constructor() {
-        this.maxRow = mapData.setting.maxRow;
-        this.maxCol = mapData.setting.maxCol;
-        this.centerPivotX = mapData.setting.centerPivotX;
-        this.centerPivotY = mapData.setting.centerPivotY;
+        this._setting = mapData.setting;
+    }
+
+    get currentMapData() {
+        return this._currentMap.map;
+    }
+
+    get setting() {
+        return this._setting;
     }
 
     getMapFromID(id: string) {
-        this.currentMap = mapData[id];
-        return this.currentMap;
-    }
-
-    getCurrentMapData() {
-        return this.currentMap.map;
+        this._currentMap = mapData[id];
+        return this._currentMap;
     }
 }
 

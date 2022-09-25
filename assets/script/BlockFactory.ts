@@ -21,18 +21,20 @@ export class BlockFactory {
         this.createMap('1');
     }
 
+    get mapSetting() {
+        return this.map.setting;
+    }
+
     createMap(id) {
-        const pivotX = this.map.centerPivotX - (this.map.maxRow / 2);
-        const pivotY = this.map.centerPivotY - (this.map.maxCol / 2);
         const currentMap = this.map.getMapFromID(id);
         let k = 0;
 
         for (let i = 0; i < currentMap.row; i++) {
             for (let j = 0; j < currentMap.col; j++) {
-                let blockData = this.map.getCurrentMapData()[k];
+                let blockData = this.map.currentMapData[k];
                 if (blockData[1] === k) {
                     const block = ObjectFactory.get(blockData[0]);
-                    block.setPosition(pivotX + i, 0, pivotY + j);
+                    block.setPosition(this.mapSetting.startRow + i, 0, this.mapSetting.startCol + j);
                     this.blockLayer.addChild(block);
                     this.blocks.push(block.getComponent(Block));
                 }

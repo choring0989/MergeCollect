@@ -1,5 +1,6 @@
 import { _decorator, Component, Node, Camera } from 'cc';
 import { BlockFactory } from './BlockFactory';
+import { MapData } from './MapData';
 const { ccclass, property } = _decorator;
 
 @ccclass('IngameManager')
@@ -21,6 +22,8 @@ export class IngameManager extends Component {
 
     blockFactory: BlockFactory;
 
+    private _mapSetting: MapData["_setting"];
+
     onLoad() {
         IngameManager._instance = this;
     }
@@ -35,6 +38,10 @@ export class IngameManager extends Component {
 
     public static get camera() {
         return IngameManager._instance.camera;
+    }
+
+    public static get mapSetting() {
+        return IngameManager._instance.blockFactory.mapSetting;
     }
 }
 
