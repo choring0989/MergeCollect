@@ -76,11 +76,9 @@
       "depends": [
         "8c52530f-5086-4398-a36d-f20b902cc720",
         "ea60bd46-0776-4711-94f6-b52ff5964d03",
-        "6e30a58c-accd-406f-b4b7-98d94e0c1f2a@d5c70",
-        "7c962593-c792-49f8-aee9-c707ba58729d@5ec8d",
+        "27435de3-e396-4c87-abab-b06c349f2cb5",
         "23d59545-8c4c-4c10-a6ae-6ef94162badb@958e8",
-        "6e30a58c-accd-406f-b4b7-98d94e0c1f2a@d5c70",
-        "ba21476f-2866-4f81-9c4d-6e359316e448",
+        "23d59545-8c4c-4c10-a6ae-6ef94162badb@958e8",
         "8c52530f-5086-4398-a36d-f20b902cc720",
         "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
         "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0",
@@ -286,5 +284,24 @@
   "86ff5c04-cf91-4b18-88cb-0128f3171faf": {
     "url": "db://assets/script/Coin.ts",
     "value": {}
+  },
+  "b4228be6-77b0-4914-b0ff-c6d88bcb99fa": {
+    "url": "db://assets/script/BlockFactory copy.ts",
+    "value": {}
+  },
+  "064cea67-2d65-4da7-b2a1-a810fb1f1df8": {
+    "url": "db://assets/script/MergeObjectFactory.ts",
+    "value": {}
+  },
+  "27435de3-e396-4c87-abab-b06c349f2cb5": {
+    "url": "db://assets/prefabs/coinBronze.prefab",
+    "value": {
+      "depends": [
+        "6e30a58c-accd-406f-b4b7-98d94e0c1f2a@e4014",
+        "6e30a58c-accd-406f-b4b7-98d94e0c1f2a@938e8",
+        "6e30a58c-accd-406f-b4b7-98d94e0c1f2a@0365f",
+        "ba21476f-2866-4f81-9c4d-6e359316e448"
+      ]
+    }
   }
 }

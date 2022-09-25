@@ -72,13 +72,25 @@
           "block",
           15
         ]
+      ],
+      "object": [
+        [
+          "coinBronze",
+          0
+        ],
+        [
+          "coinBronze",
+          1
+        ],
+        [
+          "coinBronze",
+          14
+        ]
       ]
     },
     "setting": {
       "maxRow": 4,
       "maxCol": 4,
-      "startRow": -2,
-      "startCol": -2,
       "centerPivotX": 0,
       "centerPivotY": 0
     }

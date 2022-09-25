@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 7757.244499981403,
+      "mTimestamp": 12410.133799999952,
       "chunkId": "d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53",
       "imports": [
         {
@@ -556,8 +556,8 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 2864861.3892999887,
-      "chunkId": "07fb1dcca2f4fad0c5a0bf7f0aa6ba570dd5ef4e",
+      "mTimestamp": 4924118.585400015,
+      "chunkId": "7cbb3ed998b1973f492af7954527f9c68c4a8e96",
       "imports": [
         {
           "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Block.ts",
@@ -630,7 +630,7 @@
           }
         },
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/ObjectFactory.ts",
+          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MergeObjectFactory.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
@@ -639,6 +639,20 @@
             },
             "end": {
               "line": 9,
+              "column": 119
+            }
+          }
+        },
+        {
+          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/ObjectFactory.ts",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 7
+            },
+            "end": {
+              "line": 10,
               "column": 114
             }
           }
@@ -678,6 +692,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MapData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MergeObjectFactory.ts"
           },
           "messages": []
         },
@@ -796,10 +817,10 @@
     },
     "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/IngameManager.ts": {
       "mTimestamp": {
-        "mtime": 1664077635479.7644,
+        "mtime": 1664109893985.0908,
         "uuid": "8206195b-75a0-4ad5-9dee-992217139d05"
       },
-      "chunkId": "b0027b5d47ab27648b7cdbf35bb603aac19b1471",
+      "chunkId": "66239365cffbdb77bca68a77f1decefb6b274218",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -835,6 +856,34 @@
             "end": {
               "line": 2,
               "column": 45
+            }
+          }
+        },
+        {
+          "value": "./MapData",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 35
+            },
+            "end": {
+              "line": 3,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./MergeObjectFactory",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 35
+            },
+            "end": {
+              "line": 4,
+              "column": 57
             }
           }
         }
@@ -875,15 +924,368 @@
             "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/BlockFactory.ts"
           },
           "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MapData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MergeObjectFactory.ts"
+          },
+          "messages": []
         }
       ]
     },
     "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/BlockFactory.ts": {
       "mTimestamp": {
-        "mtime": 1664078047929.4458,
+        "mtime": 1664109799962.1116,
         "uuid": "d3a2435a-e5fe-496d-a07b-a9db1b7157b9"
       },
-      "chunkId": "69ecf33b4bbc9d1cb35f12a147d4b8739b5fd64b",
+      "chunkId": "d08059487972c25c8a01c36ca231fafccb87291b",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 46
+            },
+            "end": {
+              "line": 1,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "./Block",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 22
+            },
+            "end": {
+              "line": 2,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "./ObjectFactory",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 30
+            },
+            "end": {
+              "line": 4,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Block.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/ObjectFactory.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "cce:/internal/code-quality/cr.mjs": {
+      "mTimestamp": 1664107227424,
+      "chunkId": "3a1fd7b13056478820ebedd306d3446d1aa408cc",
+      "imports": [],
+      "type": "esm",
+      "resolutions": []
+    },
+    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MapData.ts": {
+      "mTimestamp": {
+        "mtime": 1664109745021.8987,
+        "uuid": "240c2653-d35b-430d-8e00-6bda48197143"
+      },
+      "chunkId": "12a570019f63d74702e9bb50ca55ddc8f4e904e9",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 27
+            },
+            "end": {
+              "line": 1,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "../data/map.json",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 20
+            },
+            "end": {
+              "line": 2,
+              "column": 38
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/data/map.json"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/data/map.json": {
+      "mTimestamp": 1664108604524.7114,
+      "chunkId": "b33e0aeaad87599833c07c91e7fd2bd50300b4ce",
+      "imports": [],
+      "type": "json",
+      "resolutions": []
+    },
+    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Block.ts": {
+      "mTimestamp": {
+        "mtime": 1663993223938.7356,
+        "uuid": "96934dea-d363-4778-8526-2af565399897"
+      },
+      "chunkId": "577a9bac631bb370b4bf876843347c6174860ac3",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Coin.ts": {
+      "mTimestamp": {
+        "mtime": 1664078446676.758,
+        "uuid": "86ff5c04-cf91-4b18-88cb-0128f3171faf"
+      },
+      "chunkId": "fb079fe2cea7c432932158c3c578d469aa3ea7e1",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 111
+            },
+            "end": {
+              "line": 1,
+              "column": 115
+            }
+          }
+        },
+        {
+          "value": "./IngameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/IngameManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/BlockFactory%20copy.ts": {
+      "mTimestamp": {
+        "mtime": 1664078047929.4458,
+        "uuid": "b4228be6-77b0-4914-b0ff-c6d88bcb99fa"
+      },
+      "chunkId": "9553d1970b1cd092141f8bd935e7618991460d59",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -1004,19 +1406,12 @@
         }
       ]
     },
-    "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1664075459528,
-      "chunkId": "3a1fd7b13056478820ebedd306d3446d1aa408cc",
-      "imports": [],
-      "type": "esm",
-      "resolutions": []
-    },
-    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MapData.ts": {
+    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MergeObjectFactory.ts": {
       "mTimestamp": {
-        "mtime": 1664077968932.09,
-        "uuid": "240c2653-d35b-430d-8e00-6bda48197143"
+        "mtime": 1664112141414.481,
+        "uuid": "064cea67-2d65-4da7-b2a1-a810fb1f1df8"
       },
-      "chunkId": "5892132375646ace651b558791f6f11ed688b777",
+      "chunkId": "9f7ba13fe89b333866f6e0dca213a2f94bddc02d",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -1033,167 +1428,24 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 27
+              "column": 57
             },
             "end": {
               "line": 1,
-              "column": 31
+              "column": 61
             }
           }
         },
         {
-          "value": "../data/map.json",
+          "value": "./ObjectFactory",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
-              "line": 2,
-              "column": 20
-            },
-            "end": {
-              "line": 2,
-              "column": 38
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/code-quality/cr.mjs"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/data/map.json"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/data/map.json": {
-      "mTimestamp": 1664077912586.6099,
-      "chunkId": "1d53abb999ae3ef69539a22c10813cac8aa87823",
-      "imports": [],
-      "type": "json",
-      "resolutions": []
-    },
-    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Block.ts": {
-      "mTimestamp": {
-        "mtime": 1663993223938.7356,
-        "uuid": "96934dea-d363-4778-8526-2af565399897"
-      },
-      "chunkId": "577a9bac631bb370b4bf876843347c6174860ac3",
-      "imports": [
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 44
-            },
-            "end": {
-              "line": 1,
-              "column": 48
-            }
-          }
-        }
-      ],
-      "type": "esm",
-      "resolutions": [
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        },
-        {
-          "resolved": {
-            "type": "module",
-            "url": "cce:/internal/x/cc"
-          },
-          "messages": []
-        }
-      ]
-    },
-    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Coin.ts": {
-      "mTimestamp": {
-        "mtime": 1664078321642.4114,
-        "uuid": "86ff5c04-cf91-4b18-88cb-0128f3171faf"
-      },
-      "chunkId": "b3a1fc08b10305fe1273d79541f91011f4d54f31",
-      "imports": [
-        {
-          "value": "cce:/internal/code-quality/cr.mjs",
-          "resolved": "__unresolved_0"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc"
-        },
-        {
-          "value": "cc",
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 111
-            },
-            "end": {
-              "line": 1,
-              "column": 115
-            }
-          }
-        },
-        {
-          "value": "./IngameManager",
-          "resolved": "__unresolved_1",
-          "loc": {
-            "start": {
-              "line": 2,
+              "line": 4,
               "column": 30
             },
             "end": {
-              "line": 2,
+              "line": 4,
               "column": 47
             }
           }
@@ -1232,7 +1484,7 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/IngameManager.ts"
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/ObjectFactory.ts"
           },
           "messages": []
         }

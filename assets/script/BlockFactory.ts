@@ -1,6 +1,6 @@
 import { _decorator, Node, instantiate } from 'cc';
 import { Block } from './Block';
-import { MapData } from './MapData';
+import { MapData, StageData } from './MapData';
 import { ObjectFactory } from './ObjectFactory';
 const { ccclass, property } = _decorator;
 
@@ -10,28 +10,28 @@ export class BlockFactory {
     private map: MapData;
     private blocks: Block[];
 
-    constructor(blockLayer: Node) {
+    constructor(blockLayer: Node, map: MapData) {
         this.blockLayer = blockLayer;
+        this.map = map;
         this.blocks = new Array<Block>();
         this.start();
     }
 
     start() {
-        this.map = new MapData();
-        this.createMap('1');
+        this.createMap();
     }
 
     get mapSetting() {
         return this.map.setting;
     }
 
-    createMap(id) {
-        const currentMap = this.map.getMapFromID(id);
+    createMap() {
+        const currentMap = this.map.currentMapData;
         let k = 0;
 
-        for (let i = 0; i < currentMap.row; i++) {
-            for (let j = 0; j < currentMap.col; j++) {
-                let blockData = this.map.currentMapData[k];
+        for (let i = 0; i < this.mapSetting.maxRow; i++) {
+            for (let j = 0; j < this.mapSetting.maxRow; j++) {
+                let blockData = currentMap[k];
                 if (blockData[1] === k) {
                     const block = ObjectFactory.get(blockData[0]);
                     block.setPosition(this.mapSetting.startRow + i, 0, this.mapSetting.startCol + j);
