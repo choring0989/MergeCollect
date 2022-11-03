@@ -1,10 +1,10 @@
 import { _decorator, Component, EventTouch, geometry, input, Input, PhysicsSystem, physics, tween, Vec3 } from 'cc';
 import { IngameManager } from './IngameManager';
+import { Utils } from './Utils';
 const { ccclass, property } = _decorator;
 
 @ccclass('Coin')
 export class Coin extends Component {
-    private _ray: geometry.Ray = new geometry.Ray();
 
     onEnable() {
         input.on(Input.EventType.TOUCH_MOVE, this.onMove, this);
@@ -17,11 +17,11 @@ export class Coin extends Component {
     }
 
     private onMove(event: EventTouch) {
-        this.raycast(event, this.drag.bind(this));
+        Utils.raycast(event, this.node, this.drag.bind(this));
     }
 
     private onTouchEnd(event: EventTouch) {
-        this.raycast(event, this.setTilePosition.bind(this));
+        Utils.raycast(event, this.node, this.setTilePosition.bind(this));
     }
 
     private drag(item: physics.PhysicsRayResult) {
@@ -38,23 +38,6 @@ export class Coin extends Component {
         tween().target(this.node)
             .to(0.25, { position: new Vec3(x, y, 0), easing: 'quadIn' })
             .start();
-    }
-
-    private raycast(event: EventTouch, hit: Function, miss?: Function) {
-        const touch = event.touch!;
-        IngameManager.camera.screenPointToRay(touch.getLocationX(), touch.getLocationY(), this._ray);
-        if (PhysicsSystem.instance.raycast(this._ray)) {
-            const raycastResults = PhysicsSystem.instance.raycastResults;
-            for (let i = 0; i < raycastResults.length; i++) {
-                const item = raycastResults[i];
-                if (item.collider.node == this.node) {
-                    hit(item);
-                    break;
-                }
-            }
-        } else {
-            miss && miss();
-        }
     }
 }
 

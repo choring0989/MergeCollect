@@ -19,7 +19,7 @@
     "time": 1663931548792.7087
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\script": {
-    "time": 1664109895382.8435,
+    "time": 1667482008503.5713,
     "uuid": "887ec2ec-54f0-484b-b1ae-c4729e0333c2",
     "missing": false
   },
@@ -147,7 +147,7 @@
     "time": 1663993207005.008
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\script\\Coin.ts": {
-    "time": 1667480596970.837,
+    "time": 1667481824263.7427,
     "uuid": "86ff5c04-cf91-4b18-88cb-0128f3171faf",
     "missing": false
   },
@@ -181,6 +181,14 @@
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\prefabs\\blockSnow.prefab": {
     "time": 1667478961106.9038,
     "uuid": "692b3822-4745-444b-8db9-8cd001312699",
+    "missing": false
+  },
+  "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\script\\Utils.ts.meta": {
+    "time": 1667482008508.5715
+  },
+  "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\script\\Utils.ts": {
+    "time": 1667482047493.896,
+    "uuid": "e419366a-3295-47ef-b692-be98e0275ede",
     "missing": false
   }
 }

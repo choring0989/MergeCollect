@@ -535,8 +535,8 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 3101286.421200007,
-      "chunkId": "09e496b395f3362281c93269a29d6d47678870a4",
+      "mTimestamp": 4152470.561199993,
+      "chunkId": "0a9720cd6802460e9ee754bdc90c884642eb8e69",
       "imports": [
         {
           "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Block.ts",
@@ -635,6 +635,20 @@
               "column": 861
             }
           }
+        },
+        {
+          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Utils.ts",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 877
+            },
+            "end": {
+              "line": 5,
+              "column": 976
+            }
+          }
         }
       ],
       "type": "esm",
@@ -685,6 +699,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/ObjectFactory.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Utils.ts"
           },
           "messages": []
         }
@@ -1177,10 +1198,10 @@
     },
     "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Coin.ts": {
       "mTimestamp": {
-        "mtime": 1667480596970.837,
+        "mtime": 1667481824263.7427,
         "uuid": "86ff5c04-cf91-4b18-88cb-0128f3171faf"
       },
-      "chunkId": "a92448f3f6e3707a758810caf7de2c160daa6953",
+      "chunkId": "3972bcf3f8fca2b0b69efb152b3d5984ad585742",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -1216,6 +1237,20 @@
             "end": {
               "line": 2,
               "column": 47
+            }
+          }
+        },
+        {
+          "value": "./Utils",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 31
             }
           }
         }
@@ -1254,6 +1289,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/IngameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Utils.ts"
           },
           "messages": []
         }
@@ -1464,6 +1506,90 @@
           "resolved": {
             "type": "module",
             "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/ObjectFactory.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Utils.ts": {
+      "mTimestamp": {
+        "mtime": 1667482047493.896,
+        "uuid": "e419366a-3295-47ef-b692-be98e0275ede"
+      },
+      "chunkId": "a2b29e0b34e203a29668aea8395fb684bc30cb97",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 71
+            },
+            "end": {
+              "line": 1,
+              "column": 75
+            }
+          }
+        },
+        {
+          "value": "./IngameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/IngameManager.ts"
           },
           "messages": []
         }
