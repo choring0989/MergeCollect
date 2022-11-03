@@ -11,7 +11,7 @@
     "time": 1663931078417.4504
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\scene\\testScene.scene": {
-    "time": 1664110146799.4817,
+    "time": 1667481015133.8728,
     "uuid": "8c52530f-5086-4398-a36d-f20b902cc720",
     "missing": false
   },
@@ -35,7 +35,7 @@
     "time": 1663983301653.1895
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\prefabs": {
-    "time": 1664109991726.5132,
+    "time": 1667478695641.744,
     "uuid": "43df5d16-875c-4c21-befb-c2566a7cd53e",
     "missing": false
   },
@@ -43,7 +43,7 @@
     "time": 1663983304979.122
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\prefabs\\ObjectFactory.prefab": {
-    "time": 1663983304976.1226,
+    "time": 1667478718231.444,
     "uuid": "ea60bd46-0776-4711-94f6-b52ff5964d03",
     "missing": false
   },
@@ -59,7 +59,7 @@
     "time": 1663984067223.852
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\script\\BlockFactory.ts": {
-    "time": 1664109799962.1116,
+    "time": 1667479758025.5923,
     "uuid": "d3a2435a-e5fe-496d-a07b-a9db1b7157b9",
     "missing": false
   },
@@ -75,7 +75,7 @@
     "time": 1663988084107.4216
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\script\\MapData.ts": {
-    "time": 1664109745021.8987,
+    "time": 1667478090193.9148,
     "uuid": "240c2653-d35b-430d-8e00-6bda48197143",
     "missing": false
   },
@@ -147,7 +147,7 @@
     "time": 1663993207005.008
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\script\\Coin.ts": {
-    "time": 1664078446676.758,
+    "time": 1667480596970.837,
     "uuid": "86ff5c04-cf91-4b18-88cb-0128f3171faf",
     "missing": false
   },
@@ -155,7 +155,7 @@
     "time": 1664109895388.843
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\script\\MergeObjectFactory.ts": {
-    "time": 1664112141414.481,
+    "time": 1667481000554.0269,
     "uuid": "064cea67-2d65-4da7-b2a1-a810fb1f1df8",
     "missing": false
   },
@@ -163,8 +163,24 @@
     "time": 1664109962674.694
   },
   "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\prefabs\\coinBronze.prefab": {
-    "time": 1664110140539.4546,
+    "time": 1667479042784.8955,
     "uuid": "27435de3-e396-4c87-abab-b06c349f2cb5",
+    "missing": false
+  },
+  "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\prefabs\\block.prefab.meta": {
+    "time": 1667478693591.5962
+  },
+  "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\prefabs\\block.prefab": {
+    "time": 1667478953880.2249,
+    "uuid": "17e10858-ba31-4279-ae52-2c828e45e284",
+    "missing": false
+  },
+  "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\prefabs\\blockSnow.prefab.meta": {
+    "time": 1667478695654.3228
+  },
+  "C:\\Users\\이지안\\Documents\\GitHub\\MergeCollect\\assets\\prefabs\\blockSnow.prefab": {
+    "time": 1667478961106.9038,
+    "uuid": "692b3822-4745-444b-8db9-8cd001312699",
     "missing": false
   }
 }

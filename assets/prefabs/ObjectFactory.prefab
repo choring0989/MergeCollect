@@ -68,11 +68,11 @@
     },
     "prefabs": [
       {
-        "__uuid__": "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7@c8ce7",
+        "__uuid__": "17e10858-ba31-4279-ae52-2c828e45e284",
         "__expectedType__": "cc.Prefab"
       },
       {
-        "__uuid__": "92c85038-c6ef-4827-abc4-60aef0c6b498@19fcf",
+        "__uuid__": "692b3822-4745-444b-8db9-8cd001312699",
         "__expectedType__": "cc.Prefab"
       }
     ],

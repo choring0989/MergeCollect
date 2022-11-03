@@ -32,7 +32,6 @@ export class MapData {
 export class MapSettig {
     maxRow: number = 0;
     maxCol: number = 0;
-    // startRow = centerPivotX - (maxRow / 2);
     startRow: number = 0;
     startCol: number = 0;
     centerPivotX: number = 0;

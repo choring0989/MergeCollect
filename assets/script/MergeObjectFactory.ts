@@ -35,8 +35,8 @@ export class MergeObjectFactory {
             if (blockData && blockData[0] !== '') {
                 const obj = ObjectFactory.get(objData[0]);
                 const x = Math.floor(objData[1] % this.mapSetting.maxRow);
-                const z = objData[1] === 0 ? 0 : Math.floor(objData[1] / this.mapSetting.maxCol);
-                obj.setPosition(x + this.mapSetting.startRow, 0, z + this.mapSetting.startCol);
+                const y = objData[1] === 0 ? 0 : Math.floor(objData[1] / this.mapSetting.maxCol);
+                obj.setPosition(x + this.mapSetting.startRow, y + this.mapSetting.startCol, 0);
                 this.mergeLayer.addChild(obj);
                 this.mObject.push(obj.getComponent(Component));
             }

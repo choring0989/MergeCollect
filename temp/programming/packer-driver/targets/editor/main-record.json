@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 12394.068000018597,
+      "mTimestamp": 27328.007800012827,
       "chunkId": "ca4374a3008ca85000d465787e739a302e4e4ac6",
       "imports": [
         {
@@ -535,7 +535,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 4924042.367900014,
+      "mTimestamp": 3101286.421200007,
       "chunkId": "09e496b395f3362281c93269a29d6d47678870a4",
       "imports": [
         {
@@ -922,10 +922,10 @@
     },
     "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/BlockFactory.ts": {
       "mTimestamp": {
-        "mtime": 1664109799962.1116,
+        "mtime": 1667479758025.5923,
         "uuid": "d3a2435a-e5fe-496d-a07b-a9db1b7157b9"
       },
-      "chunkId": "3b8b68d15e6f6f3c1231f51e38953b8a78eb6154",
+      "chunkId": "c90662eb8b1f533a6f71582af25c9bf55f9e5f1f",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -1026,7 +1026,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1664107227424,
+      "mTimestamp": 1667477904557,
       "chunkId": "84741ad843cea9a440c5d8c2d379669b6551400d",
       "imports": [],
       "type": "esm",
@@ -1034,7 +1034,7 @@
     },
     "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MapData.ts": {
       "mTimestamp": {
-        "mtime": 1664109745021.8987,
+        "mtime": 1667478090193.9148,
         "uuid": "240c2653-d35b-430d-8e00-6bda48197143"
       },
       "chunkId": "12a570019f63d74702e9bb50ca55ddc8f4e904e9",
@@ -1177,10 +1177,10 @@
     },
     "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Coin.ts": {
       "mTimestamp": {
-        "mtime": 1664078446676.758,
+        "mtime": 1667480596970.837,
         "uuid": "86ff5c04-cf91-4b18-88cb-0128f3171faf"
       },
-      "chunkId": "6237c1096bd2c3ed9071eda94eb0084f0fcdd2e6",
+      "chunkId": "a92448f3f6e3707a758810caf7de2c160daa6953",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -1387,10 +1387,10 @@
     },
     "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MergeObjectFactory.ts": {
       "mTimestamp": {
-        "mtime": 1664112141414.481,
+        "mtime": 1667481000554.0269,
         "uuid": "064cea67-2d65-4da7-b2a1-a810fb1f1df8"
       },
-      "chunkId": "bb30508e04a9fa08fa56244d9caa84f6eed6710f",
+      "chunkId": "0bab5b809cd390f7b7627106aae7f964b2e892aa",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",

@@ -25,18 +25,18 @@ export class Coin extends Component {
     }
 
     private drag(item: physics.PhysicsRayResult) {
-        this.node.setPosition(item.hitPoint.x, 0, item.hitPoint.z);
+        this.node.setPosition(item.hitPoint.x, item.hitPoint.y, 0);
     }
 
     // @TODO: 마우스 커서가 화면 밖으로 나갈대 처리
     private setTilePosition(item: physics.PhysicsRayResult) {
         let x = Math.min(Math.round(item.hitPoint.x), IngameManager.mapSetting.maxRow / 2 - 1);
-        let z = Math.min(Math.round(item.hitPoint.z), IngameManager.mapSetting.maxCol / 2 - 1);
+        let y = Math.min(Math.round(item.hitPoint.y), IngameManager.mapSetting.maxCol / 2 - 1);
         x = x < IngameManager.mapSetting.startRow ? IngameManager.mapSetting.startRow : x;
-        z = z < IngameManager.mapSetting.startCol ? IngameManager.mapSetting.startCol : z;
+        y = y < IngameManager.mapSetting.startCol ? IngameManager.mapSetting.startCol : y;
 
         tween().target(this.node)
-            .to(0.25, { position: new Vec3(x, 0, z), easing: 'quadIn' })
+            .to(0.25, { position: new Vec3(x, y, 0), easing: 'quadIn' })
             .start();
     }
 
