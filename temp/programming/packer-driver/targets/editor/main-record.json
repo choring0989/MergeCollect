@@ -1,7 +1,7 @@
 {
   "modules": {
     "cce:/internal/x/cc": {
-      "mTimestamp": 27328.007800012827,
+      "mTimestamp": 6475.133625000715,
       "chunkId": "ca4374a3008ca85000d465787e739a302e4e4ac6",
       "imports": [
         {
@@ -535,11 +535,11 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 4152470.561199993,
+      "mTimestamp": 3304888.426458001,
       "chunkId": "0a9720cd6802460e9ee754bdc90c884642eb8e69",
       "imports": [
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Block.ts",
+          "value": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Block.ts",
           "resolved": "__unresolved_0",
           "loc": {
             "start": {
@@ -548,105 +548,105 @@
             },
             "end": {
               "line": 5,
-              "column": 134
+              "column": 107
             }
           }
         },
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/BlockFactory.ts",
+          "value": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/BlockFactory.ts",
           "resolved": "__unresolved_1",
           "loc": {
             "start": {
               "line": 5,
-              "column": 150
+              "column": 123
             },
             "end": {
               "line": 5,
-              "column": 256
+              "column": 202
             }
           }
         },
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Coin.ts",
+          "value": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts",
           "resolved": "__unresolved_2",
           "loc": {
             "start": {
               "line": 5,
-              "column": 272
+              "column": 218
             },
             "end": {
               "line": 5,
-              "column": 370
+              "column": 289
             }
           }
         },
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/IngameManager.ts",
+          "value": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/IngameManager.ts",
           "resolved": "__unresolved_3",
           "loc": {
             "start": {
               "line": 5,
-              "column": 386
+              "column": 305
             },
             "end": {
               "line": 5,
-              "column": 493
+              "column": 385
             }
           }
         },
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MapData.ts",
+          "value": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MapData.ts",
           "resolved": "__unresolved_4",
           "loc": {
             "start": {
               "line": 5,
-              "column": 509
+              "column": 401
             },
             "end": {
               "line": 5,
-              "column": 610
+              "column": 475
             }
           }
         },
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MergeObjectFactory.ts",
+          "value": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MergeObjectFactory.ts",
           "resolved": "__unresolved_5",
           "loc": {
             "start": {
               "line": 5,
-              "column": 626
+              "column": 491
             },
             "end": {
               "line": 5,
-              "column": 738
+              "column": 576
             }
           }
         },
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/ObjectFactory.ts",
+          "value": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts",
           "resolved": "__unresolved_6",
           "loc": {
             "start": {
               "line": 5,
-              "column": 754
+              "column": 592
             },
             "end": {
               "line": 5,
-              "column": 861
+              "column": 672
             }
           }
         },
         {
-          "value": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Utils.ts",
+          "value": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Utils.ts",
           "resolved": "__unresolved_7",
           "loc": {
             "start": {
               "line": 5,
-              "column": 877
+              "column": 688
             },
             "end": {
               "line": 5,
-              "column": 976
+              "column": 760
             }
           }
         }
@@ -656,56 +656,56 @@
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Block.ts"
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Block.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/BlockFactory.ts"
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/BlockFactory.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Coin.ts"
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/IngameManager.ts"
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/IngameManager.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MapData.ts"
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MapData.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/MergeObjectFactory.ts"
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MergeObjectFactory.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/ObjectFactory.ts"
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts"
           },
           "messages": []
         },
         {
           "resolved": {
             "type": "module",
-            "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/Utils.ts"
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Utils.ts"
           },
           "messages": []
         }
@@ -1047,7 +1047,7 @@
       ]
     },
     "cce:/internal/code-quality/cr.mjs": {
-      "mTimestamp": 1667477904557,
+      "mTimestamp": 1668322618966,
       "chunkId": "84741ad843cea9a440c5d8c2d379669b6551400d",
       "imports": [],
       "type": "esm",
@@ -1590,6 +1590,726 @@
           "resolved": {
             "type": "module",
             "url": "file:///C:/Users/%EC%9D%B4%EC%A7%80%EC%95%88/Documents/GitHub/MergeCollect/assets/script/IngameManager.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Block.ts": {
+      "mTimestamp": {
+        "mtime": 1668322585637.9092,
+        "uuid": "96934dea-d363-4778-8526-2af565399897"
+      },
+      "chunkId": "cb24723d231579d61fc062cf65454f89735f923d",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/BlockFactory.ts": {
+      "mTimestamp": {
+        "mtime": 1668322585638.0532,
+        "uuid": "d3a2435a-e5fe-496d-a07b-a9db1b7157b9"
+      },
+      "chunkId": "5548488072604a9d1f4b8ada42d7d398c59007c3",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 46
+            },
+            "end": {
+              "line": 1,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "./Block",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 22
+            },
+            "end": {
+              "line": 2,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "./ObjectFactory",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 30
+            },
+            "end": {
+              "line": 4,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Block.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts": {
+      "mTimestamp": {
+        "mtime": 1668325895085.53,
+        "uuid": "9999af2b-fd7e-4f3e-8587-e5dd15aeeb85"
+      },
+      "chunkId": "8310c964d6ea2ecfa7c103cffba65d699758370d",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 75
+            },
+            "end": {
+              "line": 1,
+              "column": 79
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts": {
+      "mTimestamp": {
+        "mtime": 1668325919035.2756,
+        "uuid": "86ff5c04-cf91-4b18-88cb-0128f3171faf"
+      },
+      "chunkId": "de62e59ee5d85d8748c3e2bec2f413a2a3e2af6b",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 120
+            },
+            "end": {
+              "line": 1,
+              "column": 124
+            }
+          }
+        },
+        {
+          "value": "./IngameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./ObjectFactory",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 30
+            },
+            "end": {
+              "line": 3,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./Utils",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 22
+            },
+            "end": {
+              "line": 4,
+              "column": 31
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/IngameManager.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Utils.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/IngameManager.ts": {
+      "mTimestamp": {
+        "mtime": 1668322585638.3704,
+        "uuid": "8206195b-75a0-4ad5-9dee-992217139d05"
+      },
+      "chunkId": "3f15fcf7cfa8757a2b7f7126462d0e7091cd3f02",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 52
+            },
+            "end": {
+              "line": 1,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./BlockFactory",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 29
+            },
+            "end": {
+              "line": 2,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./MapData",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 35
+            },
+            "end": {
+              "line": 3,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./MergeObjectFactory",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 35
+            },
+            "end": {
+              "line": 4,
+              "column": 57
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/BlockFactory.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MapData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MergeObjectFactory.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MapData.ts": {
+      "mTimestamp": {
+        "mtime": 1668322585638.5208,
+        "uuid": "240c2653-d35b-430d-8e00-6bda48197143"
+      },
+      "chunkId": "87e087e3cbaff3dc6a1a871a1e479997e3b1fbc3",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 27
+            },
+            "end": {
+              "line": 1,
+              "column": 31
+            }
+          }
+        },
+        {
+          "value": "../data/map.json",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 20
+            },
+            "end": {
+              "line": 2,
+              "column": 38
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/data/map.json"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/data/map.json": {
+      "mTimestamp": 1668322585635.5388,
+      "chunkId": "6cae1f760e6a20a7b1b81c9c439b969cfc19d43f",
+      "imports": [],
+      "type": "json",
+      "resolutions": []
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MergeObjectFactory.ts": {
+      "mTimestamp": {
+        "mtime": 1668322585638.6694,
+        "uuid": "064cea67-2d65-4da7-b2a1-a810fb1f1df8"
+      },
+      "chunkId": "62e7ee4960e1525d35b41c47e37373edbb988565",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 57
+            },
+            "end": {
+              "line": 1,
+              "column": 61
+            }
+          }
+        },
+        {
+          "value": "./ObjectFactory",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 30
+            },
+            "end": {
+              "line": 4,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Utils.ts": {
+      "mTimestamp": {
+        "mtime": 1668322585638.9407,
+        "uuid": "e419366a-3295-47ef-b692-be98e0275ede"
+      },
+      "chunkId": "5d25ea6f3cdf006e5fbf1072b489b86039add753",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 71
+            },
+            "end": {
+              "line": 1,
+              "column": 75
+            }
+          }
+        },
+        {
+          "value": "./IngameManager",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/IngameManager.ts"
           },
           "messages": []
         }

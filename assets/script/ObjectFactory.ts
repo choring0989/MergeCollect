@@ -45,5 +45,14 @@ export class ObjectFactory extends Component {
             }
         }
     }
+
+    static put(poolName: string, node: Node) {
+        const pool = ObjectFactory.instance.pools.get(poolName);
+        if (pool) {
+            pool.put(node);
+        } else {
+            console.warn('## not found ', poolName, ' ##');
+        }
+    }
 }
 

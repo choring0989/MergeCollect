@@ -190,5 +190,197 @@
     "time": 1667482047493.896,
     "uuid": "e419366a-3295-47ef-b692-be98e0275ede",
     "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/data": {
+    "time": 1668322624000,
+    "uuid": "dabe282f-7562-4e93-a3b3-ba85af76417c",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx": {
+    "time": 1668322624000,
+    "uuid": "1ac6f3ec-fbb2-45ae-af1b-601c72af7e0f",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs": {
+    "time": 1668325042000,
+    "uuid": "43df5d16-875c-4c21-befb-c2566a7cd53e",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/scene": {
+    "time": 1668322624000,
+    "uuid": "158f861a-6c37-4c3e-aa43-b3c78a695c30",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script": {
+    "time": 1668325923000,
+    "uuid": "887ec2ec-54f0-484b-b1ae-c4729e0333c2",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/Block.ts": {
+    "time": 1668322585637.9092,
+    "uuid": "96934dea-d363-4778-8526-2af565399897",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/BlockFactory.ts": {
+    "time": 1668322585638.0532,
+    "uuid": "d3a2435a-e5fe-496d-a07b-a9db1b7157b9",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts": {
+    "time": 1668325919035.2756,
+    "uuid": "86ff5c04-cf91-4b18-88cb-0128f3171faf",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/IngameManager.ts": {
+    "time": 1668322585638.3704,
+    "uuid": "8206195b-75a0-4ad5-9dee-992217139d05",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/MapData.ts": {
+    "time": 1668322585638.5208,
+    "uuid": "240c2653-d35b-430d-8e00-6bda48197143",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/MergeObjectFactory.ts": {
+    "time": 1668322585638.6694,
+    "uuid": "064cea67-2d65-4da7-b2a1-a810fb1f1df8",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts": {
+    "time": 1668325895085.53,
+    "uuid": "9999af2b-fd7e-4f3e-8587-e5dd15aeeb85",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/Utils.ts": {
+    "time": 1668322585638.9407,
+    "uuid": "e419366a-3295-47ef-b692-be98e0275ede",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/data.meta": {
+    "time": 1668322585635.4045
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx.meta": {
+    "time": 1668322585635.6812
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs.meta": {
+    "time": 1668322585636.7637
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/scene.meta": {
+    "time": 1668322585637.4802
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script.meta": {
+    "time": 1668322585637.776
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/Block.ts.meta": {
+    "time": 1668322585637.9783
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/BlockFactory.ts.meta": {
+    "time": 1668322585638.1182
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts.meta": {
+    "time": 1668322585638.2952
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/IngameManager.ts.meta": {
+    "time": 1668322585638.4473
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/MapData.ts.meta": {
+    "time": 1668322585638.5884
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/MergeObjectFactory.ts.meta": {
+    "time": 1668322585638.7322
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts.meta": {
+    "time": 1668322585638.8684
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/script/Utils.ts.meta": {
+    "time": 1668322585639.004
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/data/map.json": {
+    "time": 1668322585635.5388,
+    "uuid": "34ac9fc8-3af2-46bb-8a12-cba371868d43",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/block.fbx": {
+    "time": 1668322585635.847,
+    "uuid": "2f568b19-3b4f-4b8a-a68e-0c3b4ceddab7",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/blockSnow.fbx": {
+    "time": 1668322585636.0835,
+    "uuid": "92c85038-c6ef-4827-abc4-60aef0c6b498",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/coinBronze.fbx": {
+    "time": 1668322585636.3223,
+    "uuid": "6e30a58c-accd-406f-b4b7-98d94e0c1f2a",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/coinGold.fbx": {
+    "time": 1668322585636.4834,
+    "uuid": "7c962593-c792-49f8-aee9-c707ba58729d",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/coinSilver.fbx": {
+    "time": 1668322585636.6284,
+    "uuid": "23d59545-8c4c-4c10-a6ae-6ef94162badb",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs/ObjectFactory.prefab": {
+    "time": 1668326058369.3127,
+    "uuid": "ea60bd46-0776-4711-94f6-b52ff5964d03",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs/block.prefab": {
+    "time": 1668322585637.0266,
+    "uuid": "17e10858-ba31-4279-ae52-2c828e45e284",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs/blockSnow.prefab": {
+    "time": 1668322585637.163,
+    "uuid": "692b3822-4745-444b-8db9-8cd001312699",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs/coinBronze.prefab": {
+    "time": 1668324884983.3623,
+    "uuid": "27435de3-e396-4c87-abab-b06c349f2cb5",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/scene/testScene.scene": {
+    "time": 1668322585637.645,
+    "uuid": "8c52530f-5086-4398-a36d-f20b902cc720",
+    "missing": false
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/data/map.json.meta": {
+    "time": 1668322585635.6113
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/blockSnow.fbx.meta": {
+    "time": 1668322585636.1606
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/coinGold.fbx.meta": {
+    "time": 1668322585636.5635
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/coinBronze.fbx.meta": {
+    "time": 1668322585636.407
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/block.fbx.meta": {
+    "time": 1668322585635.9312
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs/block.prefab.meta": {
+    "time": 1668322585637.0945
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs/ObjectFactory.prefab.meta": {
+    "time": 1668322585636.9478
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs/blockSnow.prefab.meta": {
+    "time": 1668322585637.2295
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/prefabs/coinBronze.prefab.meta": {
+    "time": 1668322585637.4075
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/scene/testScene.scene.meta": {
+    "time": 1668322585637.7112
+  },
+  "/Users/tornice/Desktop/jian/MergeCollect/assets/fbx/coinSilver.fbx.meta": {
+    "time": 1668322585636.7017
   }
 }
