@@ -8,8 +8,8 @@
     "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MapData.ts": "./chunks/87/87e087e3cbaff3dc6a1a871a1e479997e3b1fbc3.js",
     "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MergeObjectFactory.ts": "./chunks/45/4542f25627a2c8e3bcb7854c5677dadb535154ac.js",
     "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Utils.ts": "./chunks/1f/1f013dbcde11ce8ef9ec68af2b75efab2b77528e.js",
-    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts": "./chunks/08/080e4e9e36b5699ca7bdd5fcfd28d71b18417236.js",
-    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts": "./chunks/bd/bd809e275a8e473df6a4778b91253e4c2214a052.js"
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts": "./chunks/bd/bd809e275a8e473df6a4778b91253e4c2214a052.js",
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts": "./chunks/4c/4ceb0177e47644d2e0008b76015a8616f9ec1849.js"
   },
   "scopes": {
     "./chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js": {
@@ -43,7 +43,7 @@
     "./chunks/5a/5a6a98ae14ee88abb8ca98380f8150e672c61ad5.js": {
       "__unresolved_0": "./chunks/cb/cb24723d231579d61fc062cf65454f89735f923d.js",
       "__unresolved_1": "./chunks/fe/fe25a0ab7e60f55c3057764842d1db27cfc57caf.js",
-      "__unresolved_2": "./chunks/08/080e4e9e36b5699ca7bdd5fcfd28d71b18417236.js",
+      "__unresolved_2": "./chunks/4c/4ceb0177e47644d2e0008b76015a8616f9ec1849.js",
       "__unresolved_3": "./chunks/1e/1ed28995dea9442f0248eeeebec9e481e4f9a3b1.js",
       "__unresolved_4": "./chunks/87/87e087e3cbaff3dc6a1a871a1e479997e3b1fbc3.js",
       "__unresolved_5": "./chunks/45/4542f25627a2c8e3bcb7854c5677dadb535154ac.js",
@@ -84,7 +84,7 @@
     "./chunks/cb/cb24723d231579d61fc062cf65454f89735f923d.js": {
       "cc": "./chunks/d0/d0b282b9748ef7fc7d2e7bd647d71b0f7e84da53.js"
     },
-    "./chunks/08/080e4e9e36b5699ca7bdd5fcfd28d71b18417236.js": {
+    "./chunks/4c/4ceb0177e47644d2e0008b76015a8616f9ec1849.js": {
       "__unresolved_0": "./chunks/3a/3a1fd7b13056478820ebedd306d3446d1aa408cc.js",
       "__unresolved_1": "./chunks/1e/1ed28995dea9442f0248eeeebec9e481e4f9a3b1.js",
       "__unresolved_2": "./chunks/bd/bd809e275a8e473df6a4778b91253e4c2214a052.js",

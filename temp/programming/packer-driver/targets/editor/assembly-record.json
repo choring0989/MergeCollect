@@ -615,6 +615,18 @@
       },
       "timestamp": 1668322625675
     },
+    "8310c964d6ea2ecfa7c103cffba65d699758370d": {
+      "imports": {
+        "cc": {
+          "resolved": {
+            "type": "chunk",
+            "id": "ca4374a3008ca85000d465787e739a302e4e4ac6"
+          },
+          "messages": []
+        }
+      },
+      "timestamp": 1668325923849
+    },
     "0a9720cd6802460e9ee754bdc90c884642eb8e69": {
       "imports": {
         "__unresolved_0": {
@@ -634,7 +646,7 @@
         "__unresolved_2": {
           "resolved": {
             "type": "chunk",
-            "id": "de62e59ee5d85d8748c3e2bec2f413a2a3e2af6b"
+            "id": "ae446ec0ea8d37cfb79b49becadf348ecb7c0ea4"
           },
           "messages": []
         },
@@ -674,21 +686,9 @@
           "messages": []
         }
       },
-      "timestamp": 1668325923830
+      "timestamp": 1668326881683
     },
-    "8310c964d6ea2ecfa7c103cffba65d699758370d": {
-      "imports": {
-        "cc": {
-          "resolved": {
-            "type": "chunk",
-            "id": "ca4374a3008ca85000d465787e739a302e4e4ac6"
-          },
-          "messages": []
-        }
-      },
-      "timestamp": 1668325923849
-    },
-    "de62e59ee5d85d8748c3e2bec2f413a2a3e2af6b": {
+    "ae446ec0ea8d37cfb79b49becadf348ecb7c0ea4": {
       "imports": {
         "__unresolved_0": {
           "resolved": {
@@ -726,7 +726,7 @@
           "messages": []
         }
       },
-      "timestamp": 1668325923868
+      "timestamp": 1668326881703
     }
   },
   "entries": {
@@ -738,7 +738,7 @@
     "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MapData.ts": "87e087e3cbaff3dc6a1a871a1e479997e3b1fbc3",
     "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/MergeObjectFactory.ts": "62e7ee4960e1525d35b41c47e37373edbb988565",
     "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Utils.ts": "5d25ea6f3cdf006e5fbf1072b489b86039add753",
-    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts": "de62e59ee5d85d8748c3e2bec2f413a2a3e2af6b",
-    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts": "8310c964d6ea2ecfa7c103cffba65d699758370d"
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/ObjectFactory.ts": "8310c964d6ea2ecfa7c103cffba65d699758370d",
+    "file:///Users/tornice/Desktop/jian/MergeCollect/assets/script/Coin.ts": "ae446ec0ea8d37cfb79b49becadf348ecb7c0ea4"
   }
 }
