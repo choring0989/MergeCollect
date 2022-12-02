@@ -54,7 +54,6 @@ export class Coin extends Component {
         }
     }
 
-    // @TODO: 마우스 커서가 화면 밖으로 나갈대 처리
     private setTilePosition(item: physics.PhysicsRayResult) {
         let x = Math.min(Math.round(item.hitPoint.x), IngameManager.mapSetting.maxRow / 2 - 1);
         let y = Math.min(Math.round(item.hitPoint.y), IngameManager.mapSetting.maxCol / 2 - 1);
