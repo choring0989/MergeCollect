@@ -21,7 +21,20 @@ export class Coin extends Component {
     }
 
     private onMove(event: EventTouch) {
-        Utils.raycast(event, this.node, this.drag.bind(this));
+        this.preventOutOfBoard(event) ? null : Utils.raycast(event, this.node, this.drag.bind(this));
+    }
+
+    private preventOutOfBoard(event: EventTouch): boolean {
+        const pos = IngameManager.camera.screenToWorld(new Vec3(event.touch.getLocationX(), event.touch.getLocationY(), 0));
+        if (pos.x > IngameManager.mapSetting.maxRow / 2 || pos.y > IngameManager.mapSetting.maxCol / 2) {
+            this.onTouchEnd(event);
+            return true;
+        }
+        else if (pos.x + 1 < IngameManager.mapSetting.startRow || pos.y + 1 < IngameManager.mapSetting.startRow) {
+            this.onTouchEnd(event);
+            return true;
+        }
+        return false;
     }
 
     private onTouchEnd(event: EventTouch) {
