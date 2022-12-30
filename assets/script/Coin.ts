@@ -20,6 +20,9 @@ export class Coin extends Component {
         input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
     }
 
+    update(deltaTime: number) {
+    }
+
     private onMove(event: EventTouch) {
         this.preventOutOfBoard(event) ? null : Utils.raycast(event, this.node, this.drag.bind(this));
     }
