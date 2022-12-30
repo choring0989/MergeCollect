@@ -1,5 +1,6 @@
 import { _decorator, Component, Node, Camera } from 'cc';
 import { BlockFactory } from './BlockFactory';
+import { IngameUiLayer } from './IngameUiLayer';
 import { MapData, MapSettig } from './MapData';
 import { MergeObjectFactory } from './MergeObjectFactory';
 const { ccclass, property } = _decorator;
@@ -16,8 +17,8 @@ export class IngameManager extends Component {
     @property({ type: Node })
     private mergeLayer: Node = null;
 
-    @property({ type: Node })
-    private uiLayer: Node = null;
+    @property({ type: IngameUiLayer })
+    private uiLayer: IngameUiLayer = null;
 
     private static _instance: IngameManager;
 
