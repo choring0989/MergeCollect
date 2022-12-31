@@ -1,11 +1,17 @@
 import { _decorator, Component, EventTouch, BoxCollider, input, Input, physics, tween, Vec3, ITriggerEvent, Node } from 'cc';
 import { IngameManager } from './IngameManager';
+import { MergeObjectFactory } from './MergeObjectFactory';
 import { ObjectFactory } from './ObjectFactory';
 import { Utils } from './Utils';
 const { ccclass, property } = _decorator;
 
 @ccclass('Coin')
 export class Coin extends Component {
+    private mergeObjectFactory = null;
+
+    setMergeObjectFactory(mergeObjFactory: MergeObjectFactory) {
+        this.mergeObjectFactory = mergeObjFactory;
+    }
 
     onEnable() {
         input.on(Input.EventType.TOUCH_MOVE, this.onMove, this);
@@ -71,5 +77,8 @@ export class Coin extends Component {
     // 콜라이더가 붙어있는 두 오브젝트를 모두 풀로 돌려보낸다
     private merge(other: Node, me: Node) {
         ObjectFactory.put(other.name, other);
+        if (this.mergeObjectFactory) {
+            this.mergeObjectFactory.deleteMObjectPool(this);
+        }
     }
 }

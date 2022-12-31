@@ -1,5 +1,4 @@
-import { _decorator, Node, instantiate, Component } from 'cc';
-import { Block } from './Block';
+import { _decorator, Node, Component } from 'cc';
 import { MapData } from './MapData';
 import { ObjectFactory } from './ObjectFactory';
 const { ccclass, property } = _decorator;
@@ -13,7 +12,7 @@ export class MergeObjectFactory {
     constructor(mergeLayer: Node, map: MapData) {
         this.mergeLayer = mergeLayer;
         this.map = map;
-        this.mObject = new Array<Component>();
+        this.mObject = new Array<Component>();;
         this.start();
     }
 
@@ -36,11 +35,38 @@ export class MergeObjectFactory {
                 const obj = ObjectFactory.get(objData[0]);
                 const x = Math.floor(objData[1] % this.mapSetting.maxRow);
                 const y = objData[1] === 0 ? 0 : Math.floor(objData[1] / this.mapSetting.maxCol);
+                const objComponent = obj.getComponent(Component);
                 obj.setPosition(x + this.mapSetting.startRow, y + this.mapSetting.startCol, 0);
                 this.mergeLayer.addChild(obj);
-                this.mObject.push(obj.getComponent(Component));
+                this.mObject.push(objComponent);
+                objComponent['setMergeObjectFactory'] && objComponent['setMergeObjectFactory'](this);
             }
         });
     }
-}
 
+    deleteMObjectPool(obj: Component) {
+        this.mObject.splice(this.mObject.indexOf(obj), 1);
+    }
+
+    createdMergedObject(x: number, y: number, prefabName: string) {
+        if (this.isAlreadyCreated(x, y)) {
+            return;
+        }
+
+        const obj = ObjectFactory.get(prefabName);
+        const objComponent = obj.getComponent(Component);
+        obj.setPosition(x, y, 0);
+        this.mObject.push(objComponent);
+        objComponent['setMergeObjectFactory'] && objComponent['setMergeObjectFactory'](this);
+    }
+
+    private isAlreadyCreated(x: number, y: number) {
+        for (let i = 0; i < this.mObject.length; i++) {
+            const position = this.mObject[i].node.getPosition();
+            if (position.x === x && position.y === y) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
