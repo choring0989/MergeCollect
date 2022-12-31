@@ -1,7 +1,18 @@
 import { _decorator, Node, Component } from 'cc';
+import { Coin } from './Coin';
 import { MapData } from './MapData';
 import { ObjectFactory } from './ObjectFactory';
 const { ccclass, property } = _decorator;
+
+@ccclass('Mergeable')
+export class Mergeable extends Component {
+
+    public mergeObjectFactory: MergeObjectFactory;
+    
+    setMergeObjectFactory(mergeObjFactory: MergeObjectFactory): void {
+        this.mergeObjectFactory = mergeObjFactory;
+    };
+}
 
 @ccclass('MergeObjectFactory')
 export class MergeObjectFactory {
@@ -35,11 +46,13 @@ export class MergeObjectFactory {
                 const obj = ObjectFactory.get(objData[0]);
                 const x = Math.floor(objData[1] % this.mapSetting.maxRow);
                 const y = objData[1] === 0 ? 0 : Math.floor(objData[1] / this.mapSetting.maxCol);
-                const objComponent = obj.getComponent(Component);
+                const objComponent = obj.getComponent(Mergeable);
                 obj.setPosition(x + this.mapSetting.startRow, y + this.mapSetting.startCol, 0);
                 this.mergeLayer.addChild(obj);
-                this.mObject.push(objComponent);
-                objComponent['setMergeObjectFactory'] && objComponent['setMergeObjectFactory'](this);
+                if (objComponent) {
+                    this.mObject.push(objComponent);
+                    objComponent.setMergeObjectFactory && objComponent.setMergeObjectFactory(this);
+                }
             }
         });
     }
@@ -54,10 +67,12 @@ export class MergeObjectFactory {
         }
 
         const obj = ObjectFactory.get(prefabName);
-        const objComponent = obj.getComponent(Component);
+        const objComponent = obj.getComponent(Mergeable);
         obj.setPosition(x, y, 0);
-        this.mObject.push(objComponent);
-        objComponent['setMergeObjectFactory'] && objComponent['setMergeObjectFactory'](this);
+        if (objComponent) {
+            this.mObject.push(objComponent);
+            objComponent.setMergeObjectFactory && objComponent.setMergeObjectFactory(this);
+        }
     }
 
     private isAlreadyCreated(x: number, y: number) {

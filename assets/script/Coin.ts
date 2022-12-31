@@ -1,17 +1,12 @@
 import { _decorator, Component, EventTouch, BoxCollider, input, Input, physics, tween, Vec3, ITriggerEvent, Node } from 'cc';
 import { IngameManager } from './IngameManager';
-import { MergeObjectFactory } from './MergeObjectFactory';
+import { Mergeable } from './MergeObjectFactory';
 import { ObjectFactory } from './ObjectFactory';
 import { Utils } from './Utils';
 const { ccclass, property } = _decorator;
 
 @ccclass('Coin')
-export class Coin extends Component {
-    private mergeObjectFactory = null;
-
-    setMergeObjectFactory(mergeObjFactory: MergeObjectFactory) {
-        this.mergeObjectFactory = mergeObjFactory;
-    }
+export class Coin extends Mergeable {
 
     onEnable() {
         input.on(Input.EventType.TOUCH_MOVE, this.onMove, this);
