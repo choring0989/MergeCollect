@@ -1,0 +1,4 @@
+{
+    "coinBronze" : "coinSilver",
+    "coinSilver" : "coinGold"
+}

@@ -71,9 +71,13 @@ export class Coin extends Mergeable {
 
     // 콜라이더가 붙어있는 두 오브젝트를 모두 풀로 돌려보낸다
     private merge(other: Node, me: Node) {
-        ObjectFactory.put(other.name, other);
         if (this.mergeObjectFactory) {
             this.mergeObjectFactory.deleteMObjectPool(this);
+            const nextObj = this.mergeObjectFactory.getNextPrefabEvolution(me.name);
+            if (nextObj) {
+                this.mergeObjectFactory.createdMergedObject(me.position.x, me.position.y, nextObj);
+            }
         }
+        ObjectFactory.put(other.name, other);
     }
 }

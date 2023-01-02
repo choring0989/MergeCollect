@@ -1,5 +1,5 @@
 import { _decorator, Node, Component } from 'cc';
-import { Coin } from './Coin';
+import evolutionData from '../data/evolution.json';
 import { MapData } from './MapData';
 import { ObjectFactory } from './ObjectFactory';
 const { ccclass, property } = _decorator;
@@ -19,12 +19,22 @@ export class MergeObjectFactory {
     private mergeLayer: Node = null;
     private map: MapData;
     private mObject: Component[];
+    private mPrefabEvolution: Map<string, string>;
 
     constructor(mergeLayer: Node, map: MapData) {
         this.mergeLayer = mergeLayer;
         this.map = map;
         this.mObject = new Array<Component>();;
+        this.setPrefabEvolutionMap();
         this.start();
+    }
+
+    private setPrefabEvolutionMap() {
+        this.mPrefabEvolution = new Map<string, string>();
+        for (let key in evolutionData) {
+            const value = evolutionData[key];
+            this.mPrefabEvolution.set(key, value);
+          }
     }
 
     start() {
@@ -67,6 +77,11 @@ export class MergeObjectFactory {
         }
 
         const obj = ObjectFactory.get(prefabName);
+        if (!obj) {
+            console.warn("warn :: ", prefabName, " is not exist");
+            return;
+        }
+
         const objComponent = obj.getComponent(Mergeable);
         obj.setPosition(x, y, 0);
         if (objComponent) {
@@ -83,5 +98,9 @@ export class MergeObjectFactory {
             }
         }
         return false;
+    }
+
+    getNextPrefabEvolution(key: string) {
+        return this.mPrefabEvolution.get(key);
     }
 }
