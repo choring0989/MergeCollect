@@ -1,19 +1,34 @@
 {
-    "setting":{
-       "maxRow":4,
-       "maxCol":4,
-       "centerPivotX": 0,
-       "centerPivotY": 0
-    },
     "1":{
-       "row":4,
-       "col":4,
-       "map":
-        [["block", 0], ["blockSnow", 1], ["block", 2], ["blockSnow", 3], 
+      "setting": {
+         "maxRow":4,
+         "maxCol":4,
+         "centerPivotX": 0,
+         "centerPivotY": 0
+      },
+      "map":
+        [["", 0], ["blockSnow", 1], ["block", 2], ["blockSnow", 3], 
         ["blockSnow", 4], ["block", 5], ["blockSnow", 6], ["block", 7],
         ["block", 8], ["blockSnow", 9], ["block", 10], ["blockSnow", 11],
         ["blockSnow", 12], ["block", 13], ["blockSnow", 14], ["block", 15]],
-        "object":
+      "object":
+        [["coinBronze", 0], ["coinBronze", 1], ["coinBronze", 14]]
+    },
+    "2":{
+      "setting": {
+         "maxRow":5,
+         "maxCol":5,
+         "centerPivotX": 0,
+         "centerPivotY": 0
+      },
+      "map":
+        [["block", 0], ["blockSnow", 1], ["block", 2], ["blockSnow", 3], ["blockSnow", 4],
+        ["blockSnow", 5], ["block", 6], ["blockSnow", 7], ["block", 8], ["", 9],
+        ["block", 10], ["blockSnow", 11], ["block", 12], ["blockSnow", 13], ["blockSnow", 14],
+        ["blockSnow", 15], ["block", 16], ["blockSnow", 17], ["block", 18], ["blockSnow", 19],
+        ["blockSnow", 20], ["block", 21], ["blockSnow", 22], ["block", 23], ["blockSnow", 24]
+      ],
+      "object":
         [["coinBronze", 0], ["coinBronze", 1], ["coinBronze", 14]]
     }
  }

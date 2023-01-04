@@ -32,7 +32,7 @@ export class BlockFactory {
         for (let i = 0; i < this.mapSetting.maxRow; i++) {
             for (let j = 0; j < this.mapSetting.maxCol; j++) {
                 let blockData = currentMap[k];
-                if (blockData[1] === k) {
+                if (blockData && blockData[0] !== '' && blockData[1] === k) {
                     const block = ObjectFactory.get(blockData[0]);
                     block.setPosition(this.mapSetting.startRow + i, this.mapSetting.startCol + j, -1);
                     this.blockLayer.addChild(block);

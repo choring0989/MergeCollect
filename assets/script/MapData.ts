@@ -8,7 +8,7 @@ export class MapData {
     private _currentMap = new StageData();
 
     constructor() {
-        this._setting.parse(mapData.setting);
+    
     }
 
     get currentMapData() {
@@ -25,6 +25,7 @@ export class MapData {
 
     getMapFromID(id: string) {
         this._currentMap = mapData[id];
+        this._setting.parse(this._currentMap.setting);
         return this._currentMap;
     }
 }
@@ -49,11 +50,13 @@ export class MapSettig {
 
 export class StageData {
     id: string = '';
+    setting: MapSettig = null;
     map: Array<any> = null;
     object: Array<any> = null;
 
     parse(data) {
         this.id = data.id ?? '';
+        this.setting = data.setting ?? null;
         this.map = data.map ?? null;
         this.object = data.object ?? null;
     }

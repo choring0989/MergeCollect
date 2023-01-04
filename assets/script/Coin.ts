@@ -69,7 +69,7 @@ export class Coin extends Mergeable {
             .start();
     }
 
-    // 콜라이더가 붙어있는 두 오브젝트를 모두 풀로 돌려보낸다
+    // 콜라이더가 붙어있는 두 오브젝트를 모두 풀로 돌려보낸다, json 파일 정보를 읽어서 다음 오브젝트 생성
     private merge(other: Node, me: Node) {
         if (this.mergeObjectFactory) {
             this.mergeObjectFactory.deleteMObjectPool(this);
