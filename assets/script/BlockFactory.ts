@@ -1,7 +1,9 @@
-import { _decorator, Node, instantiate } from 'cc';
+import { _decorator, Node, Scene } from 'cc';
 import { Block } from './Block';
-import { MapData, StageData } from './MapData';
+import { IngameManager } from './IngameManager';
+import { MapData } from './MapData';
 import { ObjectFactory } from './ObjectFactory';
+import { Utils } from './Utils';
 const { ccclass, property } = _decorator;
 
 @ccclass('BlockFactory')
@@ -27,20 +29,19 @@ export class BlockFactory {
 
     createMap() {
         const currentMap = this.map.currentMapData;
-        let k = 0;
+        currentMap.forEach((objData) => {
+            let blockData = currentMap[objData[1]];
+            if (blockData && blockData[0] !== '') {
+                const block = ObjectFactory.get(blockData[0]);
+                const x = Math.floor(blockData[1] % this.mapSetting.maxRow);
+                const y = blockData[1] === 0 ? 0 : Math.floor(blockData[1] / this.mapSetting.maxCol);
+                block.setPosition(this.mapSetting.startRow + x, this.mapSetting.startCol + y, -1);
+                this.blockLayer.addChild(block);
+                this.blocks.push(block.getComponent(Block));
 
-        for (let i = 0; i < this.mapSetting.maxRow; i++) {
-            for (let j = 0; j < this.mapSetting.maxCol; j++) {
-                let blockData = currentMap[k];
-                if (blockData && blockData[0] !== '' && blockData[1] === k) {
-                    const block = ObjectFactory.get(blockData[0]);
-                    block.setPosition(this.mapSetting.startRow + i, this.mapSetting.startCol + j, -1);
-                    this.blockLayer.addChild(block);
-                    this.blocks.push(block.getComponent(Block));
-                }
-                k++;
+                Utils.addDebugLabel(block.getPosition().x, block.getPosition().y, IngameManager.uiLayer.node);
             }
-        }
+        });
     }
 }
 

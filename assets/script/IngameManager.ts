@@ -33,7 +33,7 @@ export class IngameManager extends Component {
 
     start() {
         this.map = new MapData();
-        this.map.getMapFromID('1');
+        this.map.getMapFromID('2');
         this.blockFactory = new BlockFactory(this.blockLayer, this.map);
         this.mergeObjectFactory = new MergeObjectFactory(this.mergeLayer, this.map);
     }
@@ -48,6 +48,10 @@ export class IngameManager extends Component {
 
     public static get mapSetting(): MapSettig {
         return IngameManager._instance.blockFactory.mapSetting;
+    }
+
+    public static get uiLayer(): IngameUiLayer {
+        return IngameManager._instance.uiLayer;
     }
 }
 

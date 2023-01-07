@@ -1,5 +1,6 @@
-import { _decorator, EventTouch, geometry, Node, PhysicsSystem, } from 'cc';
+import { _decorator, EventTouch, geometry, Node, PhysicsSystem, Label, math, Button, Canvas, } from 'cc';
 import { IngameManager } from './IngameManager';
+import { ObjectFactory } from './ObjectFactory';
 
 export class Utils {
     private _ray: geometry.Ray = new geometry.Ray();
@@ -24,6 +25,18 @@ export class Utils {
         } else {
             miss && miss();
         }
+    }
+
+    public static addDebugLabel(x: number, y: number, layer: Node) {
+        const canvas = layer.getComponentInChildren(Canvas);
+        const node = ObjectFactory.get('DebugButton');
+        const btn = node.getComponent(Button);
+        const label = btn.getComponentInChildren(Label);
+        node.setPosition((x + 0.5) * 80, y * 80, 2);
+        canvas.node.addChild(node);
+        label.fontSize -= 5;
+        label.string = "(" + x + ", " + y + ")";
+        label.color = math.Color.RED;
     }
 }
 

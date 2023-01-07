@@ -384,7 +384,7 @@
       "prefabs",
       "length"
     ],
-    "value": 3
+    "value": 4
   },
   {
     "__type__": "cc.TargetInfo",
@@ -416,7 +416,7 @@
       "3"
     ],
     "value": {
-      "__uuid__": "23d59545-8c4c-4c10-a6ae-6ef94162badb@958e8",
+      "__uuid__": "90721a12-9bf6-497d-a21a-dafac41717be",
       "__expectedType__": "cc.Prefab"
     }
   },
@@ -430,7 +430,7 @@
       "4"
     ],
     "value": {
-      "__uuid__": "23d59545-8c4c-4c10-a6ae-6ef94162badb@958e8",
+      "__uuid__": "90721a12-9bf6-497d-a21a-dafac41717be",
       "__expectedType__": "cc.Prefab"
     }
   },
