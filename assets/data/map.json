@@ -18,8 +18,8 @@
       "setting": {
          "maxRow":5,
          "maxCol":5,
-         "centerPivotX": 0,
-         "centerPivotY": 0
+         "centerPivotX": 0.5,
+         "centerPivotY": 0.5
       },
       "map":
         [["block", 0], ["blockSnow", 1], ["block", 2], ["blockSnow", 3], ["blockSnow", 4],

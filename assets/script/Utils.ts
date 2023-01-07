@@ -32,7 +32,7 @@ export class Utils {
         const node = ObjectFactory.get('DebugButton');
         const btn = node.getComponent(Button);
         const label = btn.getComponentInChildren(Label);
-        node.setPosition((x + 0.5) * 80, y * 80, 2);
+        node.setPosition(x * 80, y * 80, 2);
         canvas.node.addChild(node);
         label.fontSize -= 5;
         label.string = "(" + x + ", " + y + ")";

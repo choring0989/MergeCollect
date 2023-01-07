@@ -1,4 +1,5 @@
 import { _decorator, Component, EventTouch, BoxCollider, input, Input, physics, tween, Vec3, ITriggerEvent, Node } from 'cc';
+import { Block } from './Block';
 import { IngameManager } from './IngameManager';
 import { Mergeable } from './MergeObjectFactory';
 import { ObjectFactory } from './ObjectFactory';
@@ -7,8 +8,10 @@ const { ccclass, property } = _decorator;
 
 @ccclass('Coin')
 export class Coin extends Mergeable {
+    private prePosition: Vec3;
 
     onEnable() {
+        input.on(Input.EventType.TOUCH_START, this.setPrePosition, this);
         input.on(Input.EventType.TOUCH_MOVE, this.onMove, this);
         input.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
 
@@ -17,11 +20,16 @@ export class Coin extends Mergeable {
     }
 
     onDisable() {
+        input.off(Input.EventType.TOUCH_START, this.setPrePosition, this);
         input.off(Input.EventType.TOUCH_MOVE, this.onMove, this);
         input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
     }
 
     update(deltaTime: number) {
+    }
+
+    private setPrePosition() {
+        this.prePosition = this.node.getPosition();
     }
 
     private onMove(event: EventTouch) {
@@ -59,10 +67,18 @@ export class Coin extends Mergeable {
     }
 
     private setTilePosition(item: physics.PhysicsRayResult) {
-        let x = Math.min(Math.round(item.hitPoint.x), IngameManager.mapSetting.maxRow / 2 - 1);
-        let y = Math.min(Math.round(item.hitPoint.y), IngameManager.mapSetting.maxCol / 2 - 1);
+        let x = Math.min(Math.round(item.hitPoint.x), IngameManager.mapSetting.endRow);
+        let y = Math.min(Math.round(item.hitPoint.y), IngameManager.mapSetting.endCol);
         x = x < IngameManager.mapSetting.startRow ? IngameManager.mapSetting.startRow : x;
         y = y < IngameManager.mapSetting.startCol ? IngameManager.mapSetting.startCol : y;
+
+        const isEsixtBlock = IngameManager.currentBlocks.filter((value: Block) =>
+            value.node.getPosition().x === x && value.node.getPosition().y === y
+        );
+        if (isEsixtBlock.length === 0) {
+            x = this.prePosition.x;
+            y = this.prePosition.y;
+        }
 
         tween().target(this.node)
             .to(0.25, { position: new Vec3(x, y, 0), easing: 'quadIn' })

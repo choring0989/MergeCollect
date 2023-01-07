@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, Camera } from 'cc';
+import { Block } from './Block';
 import { BlockFactory } from './BlockFactory';
 import { IngameUiLayer } from './IngameUiLayer';
 import { MapData, MapSettig } from './MapData';
@@ -48,6 +49,10 @@ export class IngameManager extends Component {
 
     public static get mapSetting(): MapSettig {
         return IngameManager._instance.blockFactory.mapSetting;
+    }
+
+    public static get currentBlocks(): Block[] {
+        return IngameManager._instance.blockFactory.currentBlocks;
     }
 
     public static get uiLayer(): IngameUiLayer {

@@ -33,6 +33,8 @@ export class MapData {
 export class MapSettig {
     maxRow: number = 0;
     maxCol: number = 0;
+    endRow: number = 0;
+    endCol: number = 0;
     startRow: number = 0;
     startCol: number = 0;
     centerPivotX: number = 0;
@@ -45,6 +47,8 @@ export class MapSettig {
         this.centerPivotY = data.centerPivotY ?? 0;
         this.startRow = this.centerPivotX - (this.maxRow / 2);
         this.startCol = this.centerPivotY - (this.maxCol / 2);
+        this.endRow = this.startRow + this.maxRow - 1;
+        this.endCol = this.startCol + this.maxCol - 1;
     }
 }
 

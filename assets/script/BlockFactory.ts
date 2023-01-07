@@ -27,6 +27,10 @@ export class BlockFactory {
         return this.map.setting;
     }
 
+    get currentBlocks() {
+        return this.blocks;
+    }
+
     createMap() {
         const currentMap = this.map.currentMapData;
         currentMap.forEach((objData) => {
