@@ -63,10 +63,14 @@ export class Coin extends Mergeable {
 
         if (other.node.name === me.node.name) {
             this.merge(other.node, me.node);
+        } else {
+            tween().target(this.node)
+                .to(0.25, { position: new Vec3(this.prePosition.x, this.prePosition.y, 0), easing: 'quadIn' })
+                .start();
         }
     }
 
-    private setTilePosition(item: physics.PhysicsRayResult) {
+    private setTilePosition(item: physics.PhysicsRayResult, goTween: boolean = true): Vec3 {
         let x = Math.min(Math.round(item.hitPoint.x), IngameManager.mapSetting.endRow);
         let y = Math.min(Math.round(item.hitPoint.y), IngameManager.mapSetting.endCol);
         x = x < IngameManager.mapSetting.startRow ? IngameManager.mapSetting.startRow : x;
@@ -80,9 +84,15 @@ export class Coin extends Mergeable {
             y = this.prePosition.y;
         }
 
-        tween().target(this.node)
-            .to(0.25, { position: new Vec3(x, y, 0), easing: 'quadIn' })
-            .start();
+        if (goTween) {
+            tween().target(this.node)
+                .to(0.25, { position: new Vec3(x, y, 0), easing: 'quadIn' })
+                .start();
+        } else {
+            this.node.setPosition(x, y, 0);
+        }
+
+        return new Vec3(x, y, 0);
     }
 
     // 콜라이더가 붙어있는 두 오브젝트를 모두 풀로 돌려보낸다, json 파일 정보를 읽어서 다음 오브젝트 생성
@@ -91,7 +101,10 @@ export class Coin extends Mergeable {
             this.mergeObjectFactory.deleteMObjectPool(this);
             const nextObj = this.mergeObjectFactory.getNextPrefabEvolution(me.name);
             if (nextObj) {
-                this.mergeObjectFactory.createMergedObject(me.position.x, me.position.y, nextObj);
+                const dummyRay = new physics.PhysicsRayResult();
+                dummyRay._assign(new Vec3(me.position.x, me.position.y, 0), null, null, new Vec3(me.position.x, me.position.y, 0));
+                const newPosition = this.setTilePosition(dummyRay, false);
+                this.mergeObjectFactory.createMergedObject(newPosition.x, newPosition.y, nextObj);
             }
         }
         ObjectFactory.put(other.name, other);

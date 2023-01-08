@@ -23,10 +23,10 @@
       },
       "map":
         [["block", 0], ["blockSnow", 1], ["block", 2], ["blockSnow", 3], ["blockSnow", 4],
-        ["blockSnow", 5], ["block", 6], ["blockSnow", 7], ["block", 8], ["", 9],
-        ["block", 10], ["blockSnow", 11], ["block", 12], ["blockSnow", 13], ["blockSnow", 14],
-        ["blockSnow", 15], ["block", 16], ["blockSnow", 17], ["block", 18], ["blockSnow", 19],
-        ["blockSnow", 20], ["block", 21], ["blockSnow", 22], ["block", 23], ["blockSnow", 24]
+        ["", 5], ["block", 6], ["blockSnow", 7], ["block", 8], ["", 9],
+        ["block", 10], ["blockSnow", 11], ["block", 12], ["blockSnow", 13], ["block", 14],
+        ["blockSnow", 15], ["", 16], ["blockSnow", 17], ["", 18], ["blockSnow", 19],
+        ["block", 20], ["blockSnow", 21], ["block", 22], ["blockSnow", 23], ["block", 24]
       ],
       "object":
         [["coinSilver", 0], ["coinBronze", 1], ["coinBronze", 14]]
