@@ -62,7 +62,7 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.5166666666666667,
+      0.5166666507720947,
       1
     ],
     "_values": [
@@ -113,7 +113,7 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.5166666666666667,
+      0.5166666507720947,
       1
     ],
     "_values": [
@@ -132,7 +132,7 @@
         "__type__": "cc.RealKeyframeValue",
         "interpolationMode": 0,
         "tangentWeightMode": 0,
-        "value": 1.1,
+        "value": 1.100000023841858,
         "rightTangent": 0,
         "rightTangentWeight": 1,
         "leftTangent": 0,
@@ -164,7 +164,7 @@
     "__type__": "cc.RealCurve",
     "_times": [
       0,
-      0.5166666666666667,
+      0.5166666507720947,
       1
     ],
     "_values": [

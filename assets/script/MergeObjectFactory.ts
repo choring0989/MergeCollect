@@ -1,14 +1,15 @@
-import { _decorator, Node, Component } from 'cc';
+import { _decorator, Node, Component, utils } from 'cc';
 import evolutionData from '../data/evolution.json';
 import { MapData } from './MapData';
 import { ObjectFactory } from './ObjectFactory';
+import { Utils } from './Utils';
 const { ccclass, property } = _decorator;
 
 @ccclass('Mergeable')
 export class Mergeable extends Component {
 
     public mergeObjectFactory: MergeObjectFactory;
-    
+
     setMergeObjectFactory(mergeObjFactory: MergeObjectFactory): void {
         this.mergeObjectFactory = mergeObjFactory;
     };
@@ -24,7 +25,7 @@ export class MergeObjectFactory {
     constructor(mergeLayer: Node, map: MapData) {
         this.mergeLayer = mergeLayer;
         this.map = map;
-        this.mObject = new Array<Component>();;
+        this.mObject = new Array<Component>();
         this.setPrefabEvolutionMap();
         this.start();
     }
@@ -34,7 +35,7 @@ export class MergeObjectFactory {
         for (let key in evolutionData) {
             const value = evolutionData[key];
             this.mPrefabEvolution.set(key, value);
-          }
+        }
     }
 
     start() {
@@ -71,7 +72,7 @@ export class MergeObjectFactory {
         this.mObject.splice(this.mObject.indexOf(obj), 1);
     }
 
-    createdMergedObject(x: number, y: number, prefabName: string) {
+    createMergedObject(x: number, y: number, prefabName: string) {
         if (this.isAlreadyCreated(x, y)) {
             return;
         }
@@ -83,10 +84,37 @@ export class MergeObjectFactory {
         }
 
         const objComponent = obj.getComponent(Mergeable);
-        obj.setPosition(x, y, 0);
         if (objComponent) {
+            obj.setPosition(x, y, 0);
+            this.mergeLayer.addChild(obj);
             this.mObject.push(objComponent);
             objComponent.setMergeObjectFactory && objComponent.setMergeObjectFactory(this);
+        }
+    }
+
+    createRandomObject(remain?:Array<number>) {
+        // 생성 역연산
+        let existN = this.mObject.map((mergeable: Mergeable) =>
+            mergeable.node.getPosition().x - this.mapSetting.startRow
+            + (mergeable.node.getPosition().y - this.mapSetting.startCol) * this.mapSetting.maxCol);
+        if (remain) {
+            existN = existN.concat(remain);
+        }
+        const rangeN = Array(this.map.currentMapData.length - 1).fill(0).map((v, i) => i + 1);
+        const itemsN = rangeN.filter(x => existN.indexOf(x) === -1);
+        if (itemsN.length === 0) {
+            console.log('warn :: There are no blocks on which objects can be placed.');
+            return;
+        }
+        const pickN = Utils.randomPickInArray(itemsN);
+
+        let blockData = this.map.currentMapData[pickN];
+        if (blockData && blockData[0] !== '') {
+            const x = Math.floor(pickN % this.mapSetting.maxRow);
+            const y = pickN === 0 ? 0 : Math.floor(pickN / this.mapSetting.maxCol);
+            this.createMergedObject(x + this.mapSetting.startRow, y + this.mapSetting.startCol, Utils.randomPickInArray(Object.keys(evolutionData)));
+        } else {
+            this.createRandomObject([pickN]);
         }
     }
 

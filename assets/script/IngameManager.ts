@@ -37,10 +37,15 @@ export class IngameManager extends Component {
         this.map.getMapFromID('2');
         this.blockFactory = new BlockFactory(this.blockLayer, this.map);
         this.mergeObjectFactory = new MergeObjectFactory(this.mergeLayer, this.map);
+        this.setMergeObjectFactoryOnUiLayer();
     }
 
     update(deltaTime: number) {
 
+    }
+
+    private setMergeObjectFactoryOnUiLayer() {
+        this.uiLayer.setMergeObjectFactory(this.mergeObjectFactory);
     }
 
     public static get camera(): Camera {

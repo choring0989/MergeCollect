@@ -29,6 +29,6 @@
         ["blockSnow", 20], ["block", 21], ["blockSnow", 22], ["block", 23], ["blockSnow", 24]
       ],
       "object":
-        [["coinBronze", 0], ["coinBronze", 1], ["coinBronze", 14]]
+        [["coinSilver", 0], ["coinBronze", 1], ["coinBronze", 14]]
     }
  }

@@ -43,7 +43,7 @@ export class BlockFactory {
                 this.blockLayer.addChild(block);
                 this.blocks.push(block.getComponent(Block));
 
-                Utils.addDebugLabel(block.getPosition().x, block.getPosition().y, IngameManager.uiLayer.node);
+                // Utils.addDebugLabel(block.getPosition().x, block.getPosition().y, IngameManager.uiLayer.node);
             }
         });
     }

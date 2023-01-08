@@ -38,5 +38,9 @@ export class Utils {
         label.string = "(" + x + ", " + y + ")";
         label.color = math.Color.RED;
     }
+
+    public static randomPickInArray<T>(items: Array<T>): T {
+        return items[Math.floor(Math.random() * items.length)];
+    }
 }
 

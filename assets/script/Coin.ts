@@ -91,7 +91,7 @@ export class Coin extends Mergeable {
             this.mergeObjectFactory.deleteMObjectPool(this);
             const nextObj = this.mergeObjectFactory.getNextPrefabEvolution(me.name);
             if (nextObj) {
-                this.mergeObjectFactory.createdMergedObject(me.position.x, me.position.y, nextObj);
+                this.mergeObjectFactory.createMergedObject(me.position.x, me.position.y, nextObj);
             }
         }
         ObjectFactory.put(other.name, other);
