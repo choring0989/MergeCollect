@@ -17,6 +17,7 @@ export class Coin extends Mergeable {
 
         let collider = this.node.getComponent(BoxCollider)!;
         collider.on('onTriggerEnter', this.onTrigger, this);
+        this.setPrePosition();
     }
 
     onDisable() {

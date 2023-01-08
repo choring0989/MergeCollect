@@ -92,30 +92,27 @@ export class MergeObjectFactory {
         }
     }
 
-    createRandomObject(remain?:Array<number>) {
-        // 생성 역연산
+    createRandomObject(): boolean {
+        // 생성 역연산 해서 이미 오브젝트가 존재하는 블럭 번호를 가져옴
         let existN = this.mObject.map((mergeable: Mergeable) =>
             mergeable.node.getPosition().x - this.mapSetting.startRow
             + (mergeable.node.getPosition().y - this.mapSetting.startCol) * this.mapSetting.maxCol);
-        if (remain) {
-            existN = existN.concat(remain);
-        }
         const rangeN = Array(this.map.currentMapData.length - 1).fill(0).map((v, i) => i + 1);
+        rangeN.push(0); // 위 코드로 0이 안들어가서 강제 삽입
+        // 차집합계산으로 오브젝트가 존재하지 않는 블럭을 찾음
         const itemsN = rangeN.filter(x => existN.indexOf(x) === -1);
-        if (itemsN.length === 0) {
-            console.log('warn :: There are no blocks on which objects can be placed.');
-            return;
+        itemsN.sort(() => Math.random() - 0.5); // 랜덤으로 섞음
+        for(let i = 0; i < itemsN.length; i++) {
+            // 빈 블럭이 아닌 곳의 번호를 가져와서 배치함
+            let blockData = this.map.currentMapData[itemsN[i]];
+            if (blockData && blockData[0] !== '') {
+                const x = Math.floor(itemsN[i] % this.mapSetting.maxRow);
+                const y = itemsN[i] === 0 ? 0 : Math.floor(itemsN[i] / this.mapSetting.maxCol);
+                this.createMergedObject(x + this.mapSetting.startRow, y + this.mapSetting.startCol, Utils.randomPickInArray(Object.keys(evolutionData)));
+                return true;
+            }
         }
-        const pickN = Utils.randomPickInArray(itemsN);
-
-        let blockData = this.map.currentMapData[pickN];
-        if (blockData && blockData[0] !== '') {
-            const x = Math.floor(pickN % this.mapSetting.maxRow);
-            const y = pickN === 0 ? 0 : Math.floor(pickN / this.mapSetting.maxCol);
-            this.createMergedObject(x + this.mapSetting.startRow, y + this.mapSetting.startCol, Utils.randomPickInArray(Object.keys(evolutionData)));
-        } else {
-            this.createRandomObject([pickN]);
-        }
+        return false;
     }
 
     private isAlreadyCreated(x: number, y: number) {
