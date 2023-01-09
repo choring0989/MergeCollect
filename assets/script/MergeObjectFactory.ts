@@ -7,7 +7,7 @@ const { ccclass, property } = _decorator;
 
 @ccclass('Mergeable')
 export class Mergeable extends Component {
-
+    public isClustered = false;
     public mergeObjectFactory: MergeObjectFactory;
 
     setMergeObjectFactory(mergeObjFactory: MergeObjectFactory): void {
@@ -21,11 +21,13 @@ export class MergeObjectFactory {
     private map: MapData;
     private mObject: Component[];
     private mPrefabEvolution: Map<string, string>;
+    private mCurrentCluster: Array<Mergeable>;
 
     constructor(mergeLayer: Node, map: MapData) {
         this.mergeLayer = mergeLayer;
         this.map = map;
         this.mObject = new Array<Component>();
+        this.mCurrentCluster = new Array<Mergeable>();
         this.setPrefabEvolutionMap();
         this.start();
     }
@@ -112,11 +114,41 @@ export class MergeObjectFactory {
         return false;
     }
 
+    getCluster(object: Mergeable) {
+        if (object.isClustered) return;
+
+        object.isClustered = true;
+        this.mCurrentCluster.push(object);
+        const position = object.node.getPosition();
+        
+        let objectB;
+        if (objectB = this.isAlreadyCreated(position.x, position.y - 1)) {
+            this.getNearBlock(object, objectB);
+        }
+        else if (objectB = this.isAlreadyCreated(position.x - 1, position.y)) {
+            this.getNearBlock(object, objectB);
+        }
+        else if (objectB = this.isAlreadyCreated(position.x + 1, position.y)) {
+            this.getNearBlock(object, objectB);
+        }
+        else if (objectB = this.isAlreadyCreated(position.x, position.y + 1)) {
+            this.getNearBlock(object, objectB);
+        }
+
+        return;
+    }
+
+    getNearBlock(objectA: Mergeable, objectB: Mergeable) {
+        if (objectA.node.name === objectB.node.name) {
+            this.getCluster(objectB);
+        }
+    }
+
     private isAlreadyCreated(x: number, y: number) {
         for (let i = 0; i < this.mObject.length; i++) {
             const position = this.mObject[i].node.getPosition();
             if (position.x === x && position.y === y) {
-                return true;
+                return this.mObject[i];
             }
         }
         return false;
