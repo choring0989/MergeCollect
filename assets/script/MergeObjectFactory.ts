@@ -143,6 +143,16 @@ export class MergeObjectFactory {
             this.getCluster(objectB);
         }
     }
+    
+    isNullBlock(n?: number, x?: number, y?: number) {
+        let blockData = x || y != null ?
+            this.map.currentMapData[this.getPositionNth(x, y)] : this.map.currentMapData[n];
+        if (blockData && blockData[0] !== '') {
+            return false;
+        } else {
+            return true;
+        }
+    }
 
     private isAlreadyCreated(x: number, y: number) {
         for (let i = 0; i < this.mObject.length; i++) {
@@ -152,16 +162,6 @@ export class MergeObjectFactory {
             }
         }
         return false;
-    }
-
-    private isNullBlock(n?: number, x?: number, y?: number) {
-        let blockData = x || y != null ?
-            this.map.currentMapData[this.getPositionNth(x, y)] : this.map.currentMapData[n];
-        if (blockData && blockData[0] !== '') {
-            return false;
-        } else {
-            return true;
-        }
     }
 
     private getPositionNth(x: number, y: number): number {

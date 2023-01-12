@@ -155,11 +155,11 @@
     }
   },
   "camera-uuids": [
-    "8c52530f-5086-4398-a36d-f20b902cc720"
+    "f46876e4-e81b-4931-b493-6d367be385e7"
   ],
   "game-view": {
-    "scaleValue": 94,
-    "sliderValue": 47,
+    "scaleValue": 46,
+    "sliderValue": 20,
     "devicesInfo": {
       "name": "720x1280",
       "type": "device",
