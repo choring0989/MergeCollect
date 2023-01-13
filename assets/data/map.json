@@ -6,6 +6,7 @@
          "centerPivotX": 0,
          "centerPivotY": 0
       },
+      "mission": "new nya nya!!!",
       "map":
         [["", 0], ["blockSnow", 1], ["block", 2], ["", 3], 
         ["blockSnow", 4], ["block", 5], ["blockSnow", 6], ["block", 7],
@@ -21,8 +22,9 @@
          "centerPivotX": 0.5,
          "centerPivotY": 0.5
       },
+      "mission": "new nya nya!!!",
       "map":
-        [["block", 0], ["blockSnow", 1], ["block", 2], ["blockSnow", 3], ["blockSnow", 4],
+        [["block", 0], ["blockSnow", 1], ["block", 2], ["blockSnow", 3], ["block", 4],
         ["", 5], ["block", 6], ["blockSnow", 7], ["block", 8], ["", 9],
         ["block", 10], ["blockSnow", 11], ["block", 12], ["blockSnow", 13], ["block", 14],
         ["blockSnow", 15], ["", 16], ["blockSnow", 17], ["", 18], ["blockSnow", 19],

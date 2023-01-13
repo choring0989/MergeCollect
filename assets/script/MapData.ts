@@ -57,12 +57,14 @@ export class StageData {
     setting: MapSettig = null;
     map: Array<any> = null;
     object: Array<any> = null;
+    mission: string = '';
 
     parse(data) {
         this.id = data.id ?? '';
         this.setting = data.setting ?? null;
         this.map = data.map ?? null;
         this.object = data.object ?? null;
+        this.mission = data.mission ?? 'Collect as many coins as you can!';
     }
 }
 

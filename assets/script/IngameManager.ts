@@ -2,7 +2,7 @@ import { _decorator, Component, Node, Camera } from 'cc';
 import { Block } from './Block';
 import { BlockFactory } from './BlockFactory';
 import { IngameUiLayer } from './IngameUiLayer';
-import { MapData, MapSettig } from './MapData';
+import { MapData, MapSettig, StageData } from './MapData';
 import { MergeObjectFactory } from './MergeObjectFactory';
 const { ccclass, property } = _decorator;
 
@@ -27,6 +27,7 @@ export class IngameManager extends Component {
     private blockFactory: BlockFactory;
     private mergeObjectFactory: MergeObjectFactory;
     private map: MapData;
+    private stage: StageData;
 
     onLoad() {
         IngameManager._instance = this;
@@ -34,18 +35,19 @@ export class IngameManager extends Component {
 
     start() {
         this.map = new MapData();
-        this.map.getMapFromID('2');
+        this.stage = this.map.getMapFromID('2');
         this.blockFactory = new BlockFactory(this.blockLayer, this.map);
         this.mergeObjectFactory = new MergeObjectFactory(this.mergeLayer, this.map);
-        this.setMergeObjectFactoryOnUiLayer();
+        this.setUILayerDatas();
     }
 
     update(deltaTime: number) {
 
     }
 
-    private setMergeObjectFactoryOnUiLayer() {
+    private setUILayerDatas() {
         this.uiLayer.setMergeObjectFactory(this.mergeObjectFactory);
+        this.uiLayer.setCurrentStageData(this.stage);
     }
 
     public static get camera(): Camera {

@@ -1,4 +1,5 @@
 import { _decorator, Component, Label } from 'cc';
+import { MapData, StageData } from './MapData';
 import { MergeObjectFactory } from './MergeObjectFactory';
 const { ccclass, property } = _decorator;
 
@@ -10,7 +11,11 @@ export class IngameUiLayer extends Component {
     @property({ type: Label })
     private coinCount: Label = null;
 
+    @property({ type: Label })
+    private missionLabel: Label = null;
+    
     private mergeObjectFactory: MergeObjectFactory;
+    private currentStageData: StageData;
 
     onLoad() {
         this.initText();
@@ -23,6 +28,11 @@ export class IngameUiLayer extends Component {
 
     public setMergeObjectFactory(mergeObjectFactory) {
         this.mergeObjectFactory = mergeObjectFactory;
+    }
+
+    public setCurrentStageData(data:StageData) {
+        this.currentStageData = data;
+        this.missionLabel.string = this.currentStageData.mission;
     }
 
     public onClickRandomBox() {
