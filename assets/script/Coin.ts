@@ -27,9 +27,11 @@ export class Coin extends Mergeable {
     update(deltaTime: number) {
     }
 
-    private onTouchStart() {
-        this.onTouchStartEvents();
-        this.setPrePosition();
+    private onTouchStart(event: EventTouch) {
+        Utils.raycast(event, this.node, () => {
+            this.onTouchStartEvents();
+            this.setPrePosition();
+        });
     }
 
     private setPrePosition() {
@@ -41,7 +43,7 @@ export class Coin extends Mergeable {
     }
 
     private drag(item: physics.PhysicsRayResult) {
-        this.node.setPosition(item.hitPoint.x, item.hitPoint.y, 5);
+        this.node.setPosition(item.hitPoint.x, item.hitPoint.y, 0);
     }
 
     private onTrigger(event: ITriggerEvent) {
