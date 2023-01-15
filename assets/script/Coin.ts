@@ -13,15 +13,12 @@ export class Coin extends Mergeable {
 
     onEnable() {
         input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
-        input.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
-
         this.collider = this.node.getComponent(BoxCollider);
         this.setPrePosition();
     }
 
     onDisable() {
         input.off(Input.EventType.TOUCH_START, this.onTouchStart, this);
-        input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
     }
 
     update(deltaTime: number) {
@@ -74,11 +71,13 @@ export class Coin extends Mergeable {
     private onTouchStartEvents() {
         this.collider?.on('onTriggerEnter', this.onTrigger, this);
         input.on(Input.EventType.TOUCH_MOVE, this.onMove, this);
+        input.on(Input.EventType.TOUCH_END, this.onTouchEnd, this);
     }
 
     private offTouthEndEvents() {
         this.collider?.off('onTriggerEnter', this.onTrigger, this);
         input.off(Input.EventType.TOUCH_MOVE, this.onMove, this);
+        input.off(Input.EventType.TOUCH_END, this.onTouchEnd, this);
     }
 
     private setTilePosition(item?: physics.PhysicsRayResult, x?: number, y?: number, goTween: boolean = true): Vec3 {
@@ -97,6 +96,7 @@ export class Coin extends Mergeable {
         if (goTween) {
             tween().target(this.node)
                 .to(0.25, { position: new Vec3(x, y, 0), easing: 'quadIn' })
+                .call(() => { this.merge() })
                 .start();
         } else {
             this.node.setPosition(x, y, 0);
@@ -105,16 +105,19 @@ export class Coin extends Mergeable {
         return new Vec3(x, y, 0);
     }
 
-    // 콜라이더가 붙어있는 두 오브젝트를 모두 풀로 돌려보낸다, json 파일 정보를 읽어서 다음 오브젝트 생성
-    private merge(other: Node, me: Node) {
-        if (this.mergeObjectFactory) {
-            this.mergeObjectFactory.deleteMObjectPool(this);
-            const nextObj = this.mergeObjectFactory.getNextPrefabEvolution(me.name);
+    private merge() {
+        const currentCluster = this.mergeObjectFactory.getCluster(this);
+        console.log("merge cluster: ", currentCluster);
+        if (currentCluster && currentCluster.length > 2) {
+            const nextObj = this.mergeObjectFactory.getNextPrefabEvolution(this.node.name);
             if (nextObj) {
-                const newPosition = this.setTilePosition(null, me.position.x, me.position.y, false);
-                this.mergeObjectFactory.createMergedObject(newPosition.x, newPosition.y, nextObj);
+                const newPosition = this.setTilePosition(null, this.node.position.x, this.node.position.y, false);
+                this.mergeObjectFactory.flushCluster(false, () => {
+                    this.mergeObjectFactory.createMergedObject(newPosition.x, newPosition.y, nextObj);
+                });
+                return;
             }
         }
-        ObjectFactory.put(other.name, other);
+        this.mergeObjectFactory.flushCluster(true);
     }
 }

@@ -114,36 +114,59 @@ export class MergeObjectFactory {
         return false;
     }
 
-    getCluster(object: Mergeable) {
+    flushCluster(onlyFlush: boolean = false, callback?: Function) {
+        if (!onlyFlush) {
+            this.mCurrentCluster.forEach((object: Mergeable) => {
+                console.log("is Clusterd?: ", object.isClustered);
+                if (object.isClustered) {
+                    console.log("flush: ", object.node.name);
+                    this.deleteMObjectPool(object);
+                    ObjectFactory.put(object.node.name, object.node);
+                }
+            });
+        } else {
+            this.mCurrentCluster.forEach((object: Mergeable) => {
+                if (object.isClustered) {
+                    object.isClustered = false;
+                }
+            });
+        }
+        this.mCurrentCluster = [];
+
+        callback && callback();
+    }
+
+    getCluster(object: Mergeable): Array<Mergeable> {
         if (object.isClustered) return;
 
         object.isClustered = true;
         this.mCurrentCluster.push(object);
+        console.log("push: ", object.node.name);
         const position = object.node.getPosition();
-        
+
         let objectB;
         if (objectB = this.isAlreadyCreated(position.x, position.y - 1)) {
-            this.getNearBlock(object, objectB);
+            this.getNearObject(object, objectB);
         }
         else if (objectB = this.isAlreadyCreated(position.x - 1, position.y)) {
-            this.getNearBlock(object, objectB);
+            this.getNearObject(object, objectB);
         }
         else if (objectB = this.isAlreadyCreated(position.x + 1, position.y)) {
-            this.getNearBlock(object, objectB);
+            this.getNearObject(object, objectB);
         }
         else if (objectB = this.isAlreadyCreated(position.x, position.y + 1)) {
-            this.getNearBlock(object, objectB);
+            this.getNearObject(object, objectB);
         }
 
-        return;
+        return this.mCurrentCluster;
     }
 
-    getNearBlock(objectA: Mergeable, objectB: Mergeable) {
+    getNearObject(objectA: Mergeable, objectB: Mergeable) {
         if (objectA.node.name === objectB.node.name) {
             this.getCluster(objectB);
         }
     }
-    
+
     isNullBlock(n?: number, x?: number, y?: number) {
         let blockData = x || y != null ?
             this.map.currentMapData[this.getPositionNth(x, y)] : this.map.currentMapData[n];
