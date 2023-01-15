@@ -1,4 +1,5 @@
 import { _decorator, Component, Prefab, NodePool, Node, instantiate } from 'cc';
+import { Mergeable } from './MergeObjectFactory';
 const { ccclass, property } = _decorator;
 
 @ccclass('ObjectFactory')
@@ -49,6 +50,7 @@ export class ObjectFactory extends Component {
     static put(poolName: string, node: Node) {
         const pool = ObjectFactory.instance.pools.get(poolName);
         if (pool) {
+            node.getComponent(Mergeable).put && node.getComponent(Mergeable).put();
             pool.put(node);
         } else {
             console.warn('## not found ', poolName, ' ##');
