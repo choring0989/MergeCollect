@@ -8,6 +8,9 @@ export class ObjectFactory extends Component {
     @property({ type: Prefab })
     private prefabs: Prefab[] = [];
 
+    @property({ type: Prefab })
+    private uiPrefabs: Prefab[] = [];
+
     private static _instance: ObjectFactory;
     private pools = new Map<string, NodePool>();
 
@@ -21,6 +24,9 @@ export class ObjectFactory extends Component {
 
     private initSetAll() {
         this.prefabs.forEach((prefab) => {
+            ObjectFactory.set(prefab.data.name);
+        });
+        this.uiPrefabs.forEach((prefab) => {
             ObjectFactory.set(prefab.data.name);
         });
     }
@@ -38,8 +44,10 @@ export class ObjectFactory extends Component {
         if (pool && pool.size() > 0) {
             return pool.get(args);
         } else {
-            const prefab = ObjectFactory.instance.prefabs.find((prefab) => prefab.data.name === poolName);
-            if (prefab) {
+            let prefab;
+            if (prefab = ObjectFactory.instance.prefabs.find((prefab) => prefab.data.name === poolName)) {
+                return instantiate(prefab);
+            } else if (prefab = ObjectFactory.instance.uiPrefabs.find((prefab) => prefab.data.name === poolName)) {
                 return instantiate(prefab);
             } else {
                 return null;
