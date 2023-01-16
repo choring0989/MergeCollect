@@ -56,8 +56,8 @@ export class MergeObjectFactory {
         const currentMap = this.map.currentMapData;
         const currentMobject = this.map.currentObjectData;
 
-        const objs = currentMobject;
-        objs.forEach((objData) => {
+        for (let i = currentMobject.length; i--;) {
+            const objData = currentMobject[i];
             let blockData = currentMap[objData[1]];
             if (blockData && blockData[0] !== '') {
                 const obj = ObjectFactory.get(objData[0]);
@@ -70,14 +70,14 @@ export class MergeObjectFactory {
                     objComponent.setMergeObjectFactory && objComponent.setMergeObjectFactory(this);
                 }
             }
-        });
+        }
     }
 
     deleteMObjectPool(obj: Component) {
         this.mObject.splice(this.mObject.indexOf(obj), 1);
     }
 
-    createMergedObject(x: number, y: number, prefabName: string) : Mergeable{
+    createMergedObject(x: number, y: number, prefabName: string): Mergeable {
         if (this.isAlreadyCreated(x, y)) {
             return;
         }
@@ -123,19 +123,22 @@ export class MergeObjectFactory {
 
     flushCluster(onlyFlush: boolean = false, callback?: Function) {
         if (!onlyFlush) {
-            this.mCurrentCluster.forEach((object: Mergeable) => {
+            for (let i = this.mCurrentCluster.length; i--;) {
+                const object = this.mCurrentCluster[i];
                 if (object.isClustered) {
                     console.log("flush: ", object.node.name);
                     this.deleteMObjectPool(object);
                     ObjectFactory.put(object.node.name, object.node);
                 }
-            });
+            }
         } else {
-            this.mCurrentCluster.forEach((object: Mergeable) => {
+            for (let i = this.mCurrentCluster.length; i--;) {
+                const object = this.mCurrentCluster[i];
                 if (object.isClustered) {
                     object.isClustered = false;
                 }
-            });
+            }
+
         }
         this.mCurrentCluster = [];
 
@@ -143,7 +146,7 @@ export class MergeObjectFactory {
     }
 
     getCluster(object: Mergeable): Array<Mergeable> {
-        console.log(this.mObject.map((o:Mergeable) => o.isClustered === true));
+        console.log(this.mObject.map((o: Mergeable) => o.isClustered === true));
         if (object.isClustered) {
             return;
         }

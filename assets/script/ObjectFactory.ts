@@ -23,12 +23,14 @@ export class ObjectFactory extends Component {
     }
 
     private initSetAll() {
-        this.prefabs.forEach((prefab) => {
+        for (let i = this.prefabs.length; i--;){
+            const prefab = this.prefabs[i];
             ObjectFactory.set(prefab.data.name);
-        });
-        this.uiPrefabs.forEach((prefab) => {
+        }
+        for (let i = this.uiPrefabs.length; i--;){
+            const prefab = this.uiPrefabs[i];
             ObjectFactory.set(prefab.data.name);
-        });
+        }
     }
 
     static get instance(): ObjectFactory {

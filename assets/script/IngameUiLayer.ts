@@ -48,7 +48,7 @@ export class IngameUiLayer extends Component {
         this.missionLabel.string = this.currentStageData.mission;
     }
 
-    public onClickRandomBox() {
+    public onClickRandomBox(event) {
         this.mergeObjectFactory.createRandomObject();
     }
 }

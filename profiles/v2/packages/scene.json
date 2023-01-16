@@ -23,13 +23,6 @@
           "bottom": 10,
           "left": null,
           "right": 10
-        },
-        "ParticleSystem": {
-          "dock": false,
-          "top": null,
-          "bottom": 10,
-          "left": null,
-          "right": 10
         }
       }
     }
@@ -54,8 +47,8 @@
   "camera-infos": {
     "f46876e4-e81b-4931-b493-6d367be385e7": {
       "position": {
-        "x": 360.0000000000001,
-        "y": 640.0000000000001,
+        "x": 359.2514619883042,
+        "y": 639.2514619883041,
         "z": 5000
       },
       "rotation": {
@@ -72,8 +65,8 @@
     },
     "8c52530f-5086-4398-a36d-f20b902cc720": {
       "position": {
-        "x": -5.997784230320121,
-        "y": 9.553547056294217,
+        "x": 359.2514619883042,
+        "y": 639.2514619883041,
         "z": 5000
       },
       "rotation": {
@@ -162,14 +155,14 @@
     }
   },
   "camera-uuids": [
-    "f46876e4-e81b-4931-b493-6d367be385e7"
+    "8c52530f-5086-4398-a36d-f20b902cc720"
   ],
   "game-view": {
     "scaleValue": 46,
     "sliderValue": 20,
     "devicesInfo": {
-      "name": "i18n:scene.game_view.design_resolution",
-      "type": "design",
+      "name": "720x1280",
+      "type": "device",
       "width": 720,
       "height": 1280
     }

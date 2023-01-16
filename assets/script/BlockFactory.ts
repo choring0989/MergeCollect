@@ -33,7 +33,8 @@ export class BlockFactory {
 
     createMap() {
         const currentMap = this.map.currentMapData;
-        currentMap.forEach((objData) => {
+        for (let i = currentMap.length; i--;) {
+            const objData = currentMap[i];
             let blockData = currentMap[objData[1]];
             if (blockData && blockData[0] !== '') {
                 const block = ObjectFactory.get(blockData[0]);
@@ -45,7 +46,7 @@ export class BlockFactory {
 
                 // Utils.addDebugLabel(block.getPosition().x, block.getPosition().y, IngameManager.uiLayer.node);
             }
-        });
+        }
     }
 }
 
