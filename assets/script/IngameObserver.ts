@@ -15,7 +15,7 @@ export class IngameObserver {
     }
 
     notify(objs) {
-        for (let i = 0; i < this.observers.length; i++) {
+        for (let i = this.observers.length; i--;) {
             this.observers[i].notify && this.observers[i].notify(objs);
         }
     }

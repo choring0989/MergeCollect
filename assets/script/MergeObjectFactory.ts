@@ -101,8 +101,9 @@ export class MergeObjectFactory {
 
         // 차집합계산으로 오브젝트가 존재하지 않는 블럭을 찾음
         const itemsN = rangeN.filter(x => existN.indexOf(x) === -1);
+        const len = itemsN.length;
         itemsN.sort(() => Math.random() - 0.5); // 랜덤으로 섞음
-        for (let i = 0; i < itemsN.length; i++) {
+        for (let i = 0; i < len; i++) {
             // 빈 블럭이 아닌 곳의 번호를 가져와서 배치함
             if (!this.isNullBlock(itemsN[i])) {
                 const position = this.getPositionXY(itemsN[i]);
@@ -178,7 +179,7 @@ export class MergeObjectFactory {
     }
 
     private isAlreadyCreated(x: number, y: number) {
-        for (let i = 0; i < this.mObject.length; i++) {
+        for (let i = this.mObject.length; i--;) {
             const position = this.mObject[i].node.getPosition();
             if (position.x === x && position.y === y) {
                 return this.mObject[i];

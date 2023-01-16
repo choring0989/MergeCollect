@@ -15,7 +15,7 @@ export class Utils {
         IngameManager.camera.screenPointToRay(touch.getLocationX(), touch.getLocationY(), this._instance._ray);
         if (PhysicsSystem.instance.raycast(this._instance._ray)) {
             const raycastResults = PhysicsSystem.instance.raycastResults;
-            for (let i = 0; i < raycastResults.length; i++) {
+            for (let i = raycastResults.length; i--;) {
                 const item = raycastResults[i];
                 if (item.collider.node == node) {
                     hit(item);
