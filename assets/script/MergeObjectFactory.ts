@@ -13,6 +13,10 @@ export class Mergeable extends Component {
     setMergeObjectFactory(mergeObjFactory: MergeObjectFactory): void {
         this.mergeObjectFactory = mergeObjFactory;
     };
+
+    put() {
+        this.isClustered = false;
+    }
 }
 
 @ccclass('MergeObjectFactory')
@@ -73,7 +77,7 @@ export class MergeObjectFactory {
         this.mObject.splice(this.mObject.indexOf(obj), 1);
     }
 
-    createMergedObject(x: number, y: number, prefabName: string) {
+    createMergedObject(x: number, y: number, prefabName: string) : Mergeable{
         if (this.isAlreadyCreated(x, y)) {
             return;
         }
@@ -90,6 +94,7 @@ export class MergeObjectFactory {
             this.mergeLayer.addChild(obj);
             this.mObject.push(objComponent);
             objComponent.setMergeObjectFactory && objComponent.setMergeObjectFactory(this);
+            return objComponent;
         }
     }
 
@@ -107,7 +112,8 @@ export class MergeObjectFactory {
             // 빈 블럭이 아닌 곳의 번호를 가져와서 배치함
             if (!this.isNullBlock(itemsN[i])) {
                 const position = this.getPositionXY(itemsN[i]);
-                this.createMergedObject(position.x + this.mapSetting.startRow, position.y + this.mapSetting.startCol, Utils.randomPickInArray(Object.keys(evolutionData)));
+                const obj = this.createMergedObject(position.x + this.mapSetting.startRow, position.y + this.mapSetting.startCol, Utils.randomPickInArray(Object.keys(evolutionData)));
+                this.mergeCluster(obj);
                 return true;
             }
         }
@@ -118,7 +124,6 @@ export class MergeObjectFactory {
     flushCluster(onlyFlush: boolean = false, callback?: Function) {
         if (!onlyFlush) {
             this.mCurrentCluster.forEach((object: Mergeable) => {
-                console.log("is Clusterd?: ", object.isClustered);
                 if (object.isClustered) {
                     console.log("flush: ", object.node.name);
                     this.deleteMObjectPool(object);
@@ -138,7 +143,10 @@ export class MergeObjectFactory {
     }
 
     getCluster(object: Mergeable): Array<Mergeable> {
-        if (object.isClustered) return;
+        console.log(this.mObject.map((o:Mergeable) => o.isClustered === true));
+        if (object.isClustered) {
+            return;
+        }
 
         object.isClustered = true;
         this.mCurrentCluster.push(object);
@@ -149,13 +157,13 @@ export class MergeObjectFactory {
         if (objectB = this.isAlreadyCreated(position.x, position.y - 1)) {
             this.getNearObject(object, objectB);
         }
-        else if (objectB = this.isAlreadyCreated(position.x - 1, position.y)) {
+        if (objectB = this.isAlreadyCreated(position.x - 1, position.y)) {
             this.getNearObject(object, objectB);
         }
-        else if (objectB = this.isAlreadyCreated(position.x + 1, position.y)) {
+        if (objectB = this.isAlreadyCreated(position.x + 1, position.y)) {
             this.getNearObject(object, objectB);
         }
-        else if (objectB = this.isAlreadyCreated(position.x, position.y + 1)) {
+        if (objectB = this.isAlreadyCreated(position.x, position.y + 1)) {
             this.getNearObject(object, objectB);
         }
 
@@ -166,6 +174,21 @@ export class MergeObjectFactory {
         if (objectA.node.name === objectB.node.name) {
             this.getCluster(objectB);
         }
+    }
+
+    mergeCluster(object: Mergeable) {
+        const currentCluster = this.getCluster(object);
+        if (currentCluster && currentCluster.length > 2) {
+            const nextObj = this.getNextPrefabEvolution(object.node.name);
+            if (nextObj) {
+                this.flushCluster(false, () => {
+                    const position = object.node.getPosition();
+                    this.createMergedObject(position.x, position.y, nextObj);
+                });
+                return;
+            }
+        }
+        this.flushCluster(true);
     }
 
     isNullBlock(n?: number, x?: number, y?: number) {

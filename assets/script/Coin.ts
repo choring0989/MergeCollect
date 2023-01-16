@@ -98,26 +98,12 @@ export class Coin extends Mergeable {
                 .to(0.25, { position: new Vec3(x, y, 0), easing: 'quadIn' })
                 .call(() => { this.merge() })
                 .start();
-        } else {
-            this.node.setPosition(x, y, 0);
         }
 
         return new Vec3(x, y, 0);
     }
 
     private merge() {
-        const currentCluster = this.mergeObjectFactory.getCluster(this);
-        console.log("merge cluster: ", currentCluster);
-        if (currentCluster && currentCluster.length > 2) {
-            const nextObj = this.mergeObjectFactory.getNextPrefabEvolution(this.node.name);
-            if (nextObj) {
-                const newPosition = this.setTilePosition(null, this.node.position.x, this.node.position.y, false);
-                this.mergeObjectFactory.flushCluster(false, () => {
-                    this.mergeObjectFactory.createMergedObject(newPosition.x, newPosition.y, nextObj);
-                });
-                return;
-            }
-        }
-        this.mergeObjectFactory.flushCluster(true);
+        this.mergeObjectFactory.mergeCluster(this);
     }
 }

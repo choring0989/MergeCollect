@@ -46,6 +46,7 @@ export class IngameManager extends Component {
     }
 
     private setUILayerDatas() {
+        this.uiLayer.init();
         this.uiLayer.setMergeObjectFactory(this.mergeObjectFactory);
         this.uiLayer.setCurrentStageData(this.stage);
     }
