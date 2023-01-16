@@ -45,8 +45,8 @@ export class MapSettig {
         this.maxCol = data.maxCol ?? 0;
         this.centerPivotX = data.centerPivotX ?? 0;
         this.centerPivotY = data.centerPivotY ?? 0;
-        this.startRow = this.centerPivotX - (this.maxRow / 2);
-        this.startCol = this.centerPivotY - (this.maxCol / 2);
+        this.startRow = this.centerPivotX - (this.maxRow * 0.5);
+        this.startCol = this.centerPivotY - (this.maxCol * 0.5);
         this.endRow = this.startRow + this.maxRow - 1;
         this.endCol = this.startCol + this.maxCol - 1;
     }

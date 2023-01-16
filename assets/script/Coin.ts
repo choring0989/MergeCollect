@@ -52,7 +52,7 @@ export class Coin extends Mergeable {
 
     private preventOutOfBoard(event: EventTouch): boolean {
         const pos = IngameManager.camera.screenToWorld(new Vec3(event.touch.getLocationX(), event.touch.getLocationY(), 0));
-        if (pos.x > IngameManager.mapSetting.maxRow / 2 || pos.y > IngameManager.mapSetting.maxCol / 2) {
+        if (pos.x > IngameManager.mapSetting.maxRow * 0.5 || pos.y > IngameManager.mapSetting.maxCol * 0.5) {
             this.onTouchEnd(event);
             return true;
         }
