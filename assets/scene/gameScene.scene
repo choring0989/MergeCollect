@@ -393,7 +393,7 @@
       "prefabs",
       "length"
     ],
-    "value": 4
+    "value": 5
   },
   {
     "__type__": "cc.TargetInfo",
@@ -439,7 +439,7 @@
       "4"
     ],
     "value": {
-      "__uuid__": "34551f85-be3f-4854-a1c2-be8066ecf536",
+      "__uuid__": "ebd4d2fd-912c-46fe-9d43-1d6e1d83aa18",
       "__expectedType__": "cc.Prefab"
     }
   },

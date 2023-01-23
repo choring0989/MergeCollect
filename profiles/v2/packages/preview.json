@@ -1,10 +1,10 @@
 {
   "preview": {
     "current": {
-      "platform": "browser"
+      "platform": "gameView"
     }
   },
   "general": {
-    "start_scene": "8c52530f-5086-4398-a36d-f20b902cc720"
+    "start_scene": "current_scene"
   }
 }
