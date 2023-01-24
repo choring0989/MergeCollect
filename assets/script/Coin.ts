@@ -1,7 +1,7 @@
 import { _decorator, Component, EventTouch, BoxCollider, input, Input, physics, tween, Vec3, ITriggerEvent, Node } from 'cc';
 import { Block } from './Block';
 import { IngameManager } from './IngameManager';
-import { Mergeable } from './MergeObjectFactory';
+import { Mergeable, zIndex } from './MergeObjectFactory';
 import { ObjectFactory } from './ObjectFactory';
 import { Utils } from './Utils';
 const { ccclass, property } = _decorator;
@@ -40,7 +40,7 @@ export class Coin extends Mergeable {
     }
 
     private drag(item: physics.PhysicsRayResult) {
-        this.node.setPosition(item.hitPoint.x, item.hitPoint.y, 0);
+        this.node.setPosition(item.hitPoint.x, item.hitPoint.y, zIndex.DRAG);
     }
 
     private onTrigger(event: ITriggerEvent) {
@@ -51,7 +51,7 @@ export class Coin extends Mergeable {
     }
 
     private preventOutOfBoard(event: EventTouch): boolean {
-        const pos = IngameManager.camera.screenToWorld(new Vec3(event.touch.getLocationX(), event.touch.getLocationY(), 0));
+        const pos = IngameManager.camera.screenToWorld(new Vec3(event.touch.getLocationX(), event.touch.getLocationY(), zIndex.OBJECT));
         if (pos.x > IngameManager.mapSetting.maxRow * 0.5 || pos.y > IngameManager.mapSetting.maxCol * 0.5) {
             this.onTouchEnd(event);
             return true;
@@ -88,19 +88,20 @@ export class Coin extends Mergeable {
         x = x < IngameManager.mapSetting.startRow ? IngameManager.mapSetting.startRow : x;
         y = y < IngameManager.mapSetting.startCol ? IngameManager.mapSetting.startCol : y;
 
-        if (this.mergeObjectFactory.isNullBlock(null, x, y)) {
+        // 블록이 없거나 이미 오브젝트가 있는 블록이라면 
+        if (this.mergeObjectFactory.isNullBlock(null, x, y) || this.mergeObjectFactory.isAlreadyCreated(x, y)) {
             x = this.prePosition.x;
             y = this.prePosition.y;
         }
 
         if (goTween) {
             tween().target(this.node)
-                .to(0.25, { position: new Vec3(x, y, 0), easing: 'quadIn' })
+                .to(0.25, { position: new Vec3(x, y, zIndex.OBJECT), easing: 'quadIn' })
                 .call(() => { this.merge() })
                 .start();
         }
 
-        return new Vec3(x, y, 0);
+        return new Vec3(x, y, zIndex.OBJECT);
     }
 
     private merge() {

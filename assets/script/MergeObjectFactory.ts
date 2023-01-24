@@ -5,6 +5,11 @@ import { ObjectFactory } from './ObjectFactory';
 import { Utils } from './Utils';
 const { ccclass, property } = _decorator;
 
+export enum zIndex {
+    OBJECT,
+    DRAG,
+}
+
 @ccclass('Mergeable')
 export class Mergeable extends Component {
     public isClustered = false;
@@ -63,7 +68,7 @@ export class MergeObjectFactory {
                 const obj = ObjectFactory.get(objData[0]);
                 const position = this.getPositionXY(objData[1]);
                 const objComponent = obj.getComponent(Mergeable);
-                obj.setPosition(position.x + this.mapSetting.startRow, position.y + this.mapSetting.startCol, 0);
+                obj.setPosition(position.x + this.mapSetting.startRow, position.y + this.mapSetting.startCol, zIndex.OBJECT);
                 this.mergeLayer.addChild(obj);
                 if (objComponent) {
                     this.mObject.push(objComponent);
@@ -204,7 +209,7 @@ export class MergeObjectFactory {
         }
     }
 
-    private isAlreadyCreated(x: number, y: number) {
+    isAlreadyCreated(x: number, y: number) {
         for (let i = this.mObject.length; i--;) {
             const position = this.mObject[i].node.getPosition();
             if (position.x === x && position.y === y) {
@@ -219,7 +224,7 @@ export class MergeObjectFactory {
     }
 
     private getPositionXY(n: number): Vec3 {
-        return new Vec3(Math.floor(n % this.mapSetting.maxRow), n === 0 ? 0 : Math.floor(n / this.mapSetting.maxCol), 0);
+        return new Vec3(Math.floor(n % this.mapSetting.maxRow), n === 0 ? 0 : Math.floor(n / this.mapSetting.maxCol), zIndex.OBJECT);
     }
 
     getNextPrefabEvolution(key: string) {
